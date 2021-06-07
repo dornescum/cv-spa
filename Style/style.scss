@@ -1,0 +1,60 @@
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/navbar";
+@import "partials/sidebar";
+@import "partials/section-present";
+@import "partials/section-past";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+  font-size: $font-size;
+  font-family: 'Raleway', sans-serif;
+  //font-weight: 100;
+  color: $secondary-color;
+}
+
+.main {
+  background: $main-color;
+  height: 100vh;
+  //@media (max-width: $desktop) {
+  //  background: purple;
+  //}
+  //@media (max-width: $tablet) {
+  //  background: gray;
+  //}
+  //@media (max-width: $sm) {
+  //  background: fuchsia;
+  //}
+
+  ul {
+    list-style-type: none;
+  }
+
+  ul li {
+  }
+
+  a {
+  }
+
+  p {
+  }
+}
+.wrapper{
+  padding: .2rem;
+  margin: .1rem;
+  @media (max-width: $sm) {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+section{
+  //height: 50vh;
+}

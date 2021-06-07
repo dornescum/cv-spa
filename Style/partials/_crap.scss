@@ -1,0 +1,92 @@
+@media screen and (min-width: 800px) {
+  .nav-center {
+    position: relative;
+    .toggle-nav {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width:800px){
+  .nav-link {
+    display: none;
+  }
+
+  //.nav-logo {
+  //  position: absolute;
+  //  top: 50%;
+  //  left: 65%;
+  //  -webkit-transform: translate(-50%, -50%);
+  //  -ms-transform: translate(-50%, -50%);
+  //  transform: translate(-50%, -50%);
+  //}
+
+
+
+  .nav-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+  }
+
+  .nav-link {
+    color: $clr-white;
+    margin-right: 3rem;
+    letter-spacing: $spacing;
+    -webkit-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+    font-size: 1rem;
+    border: 1px solid $clr-white;
+    border-radius: $radius;
+    padding: 0.1rem 1rem;
+  }
+
+  .nav-link:hover {
+    color: $clr-primary-5;
+    background-color: $clr-white;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .nav-logo {
+    left: 50%;
+  }
+}
+//==========
+<div class="nav-center">
+<!--                button-->
+<button class="toggle-nav">
+<i class="fas fa-bars"></i>
+</button>
+<div>
+<!--        links-->
+
+<!--                <ul class="nav-links">-->
+<!--                    <li>-->
+<!--                        <a href="index.html" class="nav-link">-->
+<!--                            Home-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="past.html" class="nav-link">-->
+<!--                            past-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="future.html" class="nav-link">-->
+<!--                            future-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                </ul>-->
+</div>
+<!--        button cv-->
+<!--            <div>-->
+<!--                <a href="./img/resume/Resume.docx" download="">-->
+<!--                    <button class="hero-btn">-->
+<!--                        <i class="fas fa-user"> Curriculum Vitae</i>-->
+<!--                    </button>-->
+<!--                </a>-->
+<!--            </div>-->
+</div>

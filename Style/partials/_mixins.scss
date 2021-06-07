@@ -1,0 +1,15 @@
+@mixin display_flex{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+@mixin flex-sb {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+@mixin flex-sa {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}

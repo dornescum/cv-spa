@@ -4,6 +4,7 @@
 @import "partials/sidebar";
 @import "partials/section-present";
 @import "partials/section-past";
+@import "partials/section-future";
 @import "modules/animate";
 
 * {
@@ -43,10 +44,10 @@ body {
 
 .wrapper {
   padding: .2rem;
-  margin: .1rem;
+  margin: 5rem .1rem .1rem .1rem;
   @media (max-width: $sm) {
     padding: 0;
-    margin: 0;
+    //margin: 0;
   }
 }
 
@@ -76,15 +77,20 @@ body {
     .card-list {
       padding: .2rem 1rem;
       margin: .2rem .5rem;
-      background-color: red;
+      background-color: $main-color;
       animation-duration: 4s;
       @include display_flex;
+      @media (max-width: $sm) {
+        //padding: .5rem 0 0 3rem;
+        @include flex-start;
+      }
     }
   }
 
   .close-card {
     @include flex-end;
-    .close-card-btn{
+
+    .close-card-btn {
       padding: .15rem .3rem;
       margin: .1rem .2rem;
       border: none;
@@ -93,19 +99,85 @@ body {
       transition: $transition;
       box-shadow: $light-shadow;
 
-      &:hover{
+      &:hover {
         box-shadow: $dark-shadow;
-
-        background-color: $secondary-color;
+        //background-color: $secondary-color;
         color: $main-color;
       }
     }
   }
 }
-.title{
+
+.title {
   @include flex-start;
   padding: .5rem 0 0 6rem;
+  text-transform: capitalize;
+  font-size: $font-size-bg;
   @media (max-width: $sm) {
-    padding: .5rem 0 0 3rem;
+    padding: 1rem 0 0 3rem;
   }
+}
+
+.card-3 {
+  //background-color: red;
+  padding: 1rem;
+  margin: .5rem;
+  width: 390px;
+  max-width: 400px;
+  min-width: 300px;
+  box-shadow: $light-shadow;
+  transition: $transition;
+  border-radius: $radius;
+  background-color: $white-1;
+  @include display_flex;
+
+  &:hover {
+    box-shadow: $dark-shadow;
+  }
+
+  @media (max-width: $sm) {
+    //padding: .5rem;
+    width: $sm-width;
+    max-width: $sm-max-width;
+    min-width: $sm-min-width;
+  }
+
+  .card-project {
+    //background-color: blue;
+    width: 100%;
+
+    h5 {
+      //color: green;
+      text-transform: capitalize;
+      font-size: 1.2rem;
+      padding: .1rem 0 .1rem 1.1rem;
+    }
+
+    img {
+      padding: 1rem;
+      //width: 15rem;
+      width: 100%;
+      filter: grayscale(100%);
+
+
+    }
+
+    .card-desc {
+      //font-size: 30px;
+      padding: .1rem 1.1rem .1rem 1.1rem;
+      text-align: justify;
+
+    }
+
+    .card-link {
+      padding: 1rem 1.1rem .1rem 1.1rem;
+      font-weight: 500;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $secondary-color;
+      @include flex-end;
+    }
+  }
+
+
 }

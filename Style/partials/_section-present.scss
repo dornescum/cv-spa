@@ -8,12 +8,12 @@
 
 .row  {
   padding: 2rem 1rem;
-  margin: .5rem;
+  margin: 2rem .5rem 1rem .5rem;
   @include display_flex;
   @media (max-width: $sm) {
     flex-wrap: wrap;
     padding: 0.1rem;
-    margin: 0.1rem;
+    //margin: 5rem 0.1rem;
   }
   .left-1{
     width: 300px ;
@@ -21,15 +21,19 @@
     min-width: 400px;
     @include display_flex;
     @media (max-width: $sm) {
-      width: 280px ;
-      max-width: 320px;
-      min-width: 250px;
+      //width: 280px ;
+      //max-width: 320px;
+      //min-width: 250px;
+      width: $sm-width;
+      max-width: $sm-max-width;
+      min-width: $sm-min-width;
     }
 
   img  {
     height: 15rem;
     //width: 12rem;
     //padding-left: 3rem;
+    filter: grayscale(100%);
     @media (max-width: $sm) {
       padding: 1rem 0;
       height: 20rem;
@@ -40,12 +44,15 @@
     padding: .2rem 2rem .2rem .2rem;
     margin: .1rem 1rem .1rem .1rem;
     @media (max-width: $sm) {
-      width: 280px ;
-      max-width: 320px;
-      min-width: 250px;
+      //width: 280px ;
+      //max-width: 320px;
+      //min-width: 250px;
       text-align: justify;
-      padding: .2rem;
+      padding: .2rem .4rem;
       margin: .1rem;
+      width: $sm-width;
+      max-width: $sm-max-width;
+      min-width: $sm-min-width;
 
     }
   }

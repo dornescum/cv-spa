@@ -379,13 +379,15 @@ body {
   color: #ffffff;
 }
 
-.remove-anim {
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
+.title {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0.5rem 0 0 6rem;
 }
-.remove-anim .fade {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+@media (max-width: 600px) {
+  .title {
+    padding: 0.5rem 0 0 3rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

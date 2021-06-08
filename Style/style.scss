@@ -26,15 +26,6 @@ body {
 .main {
   background: $main-color;
   height: 100vh;
-  //@media (max-width: $desktop) {
-  //  background: purple;
-  //}
-  //@media (max-width: $tablet) {
-  //  background: gray;
-  //}
-  //@media (max-width: $sm) {
-  //  background: fuchsia;
-  //}
 
   ul {
     list-style-type: none;
@@ -111,13 +102,10 @@ body {
     }
   }
 }
-//animation
-.remove-anim{
-  opacity: 1;
-  transition: opacity .5s ease-in-out;
-  .fade{
-    opacity: 0;
-    transition: opacity .5s ease-in-out;
-
+.title{
+  @include flex-start;
+  padding: .5rem 0 0 6rem;
+  @media (max-width: $sm) {
+    padding: .5rem 0 0 3rem;
   }
 }

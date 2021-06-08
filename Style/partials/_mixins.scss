@@ -16,5 +16,8 @@
 @mixin flex-end {
   display: flex;
   justify-content:flex-end;
-  //align-content: center;
+}
+@mixin flex-start {
+  display: flex;
+  justify-content:flex-start;
 }

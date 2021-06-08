@@ -4,15 +4,18 @@
 @import "partials/sidebar";
 @import "partials/section-present";
 @import "partials/section-past";
+@import "modules/animate";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html{
+
+html {
   scroll-behavior: smooth;
 }
+
 body {
   font-size: $font-size;
   font-family: 'Raleway', sans-serif;
@@ -46,7 +49,8 @@ body {
   p {
   }
 }
-.wrapper{
+
+.wrapper {
   padding: .2rem;
   margin: .1rem;
   @media (max-width: $sm) {
@@ -55,6 +59,65 @@ body {
   }
 }
 
-section{
-  //height: 50vh;
+.card {
+  padding: 1rem;
+  width: $md-width;
+  max-width: $md-max-width;
+  min-width: $md-min-width;
+  box-shadow: $light-shadow;
+  transition: $transition;
+  border-radius: $radius;
+  background-color: $white-1;
+
+  &:hover {
+    box-shadow: $dark-shadow;
+  }
+
+  @media (max-width: $sm) {
+    width: $sm-width;
+    max-width: $sm-max-width;
+    min-width: $sm-min-width;
+  }
+
+  .card-ul {
+    display: block;
+
+    .card-list {
+      padding: .2rem 1rem;
+      margin: .2rem .5rem;
+      background-color: red;
+      animation-duration: 4s;
+      @include display_flex;
+    }
+  }
+
+  .close-card {
+    @include flex-end;
+    .close-card-btn{
+      padding: .15rem .3rem;
+      margin: .1rem .2rem;
+      border: none;
+      outline: none;
+      border-radius: 100%;
+      transition: $transition;
+      box-shadow: $light-shadow;
+
+      &:hover{
+        box-shadow: $dark-shadow;
+
+        background-color: $secondary-color;
+        color: $main-color;
+      }
+    }
+  }
+}
+//animation
+.remove-anim{
+  opacity: 1;
+  transition: opacity .5s ease-in-out;
+  .fade{
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+
+  }
 }

@@ -212,12 +212,23 @@
   }
 }
 
-#past .right-2 {
-  padding: 0.2rem 2rem 0.2rem 0.2rem;
-  margin: 0.1rem 1rem 0.1rem 0.1rem;
+.past .past-left {
+  padding: 0.1rem;
+  margin: 0.1rem;
 }
 @media (max-width: 600px) {
-  #past .right-2 {
+  .past .past-left {
+    text-align: justify;
+    padding: 0.2rem;
+    margin: 0.1rem;
+  }
+}
+.past .past-right {
+  padding: 0.1rem;
+  margin: 0.1rem;
+}
+@media (max-width: 600px) {
+  .past .past-right {
     width: 280px;
     max-width: 320px;
     min-width: 250px;
@@ -227,6 +238,62 @@
   }
 }
 
+#html {
+  animation: anim-left 2s ease-in;
+}
+
+#css {
+  animation: anim-left 2.5s ease-in;
+}
+
+#bootstrap {
+  animation: anim-left 3s ease-in;
+}
+
+#sccs {
+  animation: anim-left 3.5s ease-in;
+}
+
+@keyframes anim-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#typescript {
+  animation: anim-right 2s ease-in;
+}
+
+#react {
+  animation: anim-right 2.5s ease-in;
+}
+
+#next {
+  animation: anim-right 3s ease-in;
+}
+
+#vue {
+  animation: anim-right 3.5s ease-in;
+}
+
+@keyframes anim-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -259,6 +326,66 @@ body {
     padding: 0;
     margin: 0;
   }
+}
+
+.card {
+  padding: 1rem;
+  width: 600px;
+  max-width: 650px;
+  min-width: 400px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s linear;
+  border-radius: 5px;
+  background-color: #fafafa;
+}
+.card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 600px) {
+  .card {
+    width: 250px;
+    max-width: 320px;
+    min-width: 280px;
+  }
+}
+.card .card-ul {
+  display: block;
+}
+.card .card-ul .card-list {
+  padding: 0.2rem 1rem;
+  margin: 0.2rem 0.5rem;
+  background-color: red;
+  animation-duration: 4s;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.card .close-card {
+  display: flex;
+  justify-content: flex-end;
+}
+.card .close-card .close-card-btn {
+  padding: 0.15rem 0.3rem;
+  margin: 0.1rem 0.2rem;
+  border: none;
+  outline: none;
+  border-radius: 100%;
+  transition: all 0.3s linear;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.card .close-card .close-card-btn:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background-color: #222;
+  color: #ffffff;
+}
+
+.remove-anim {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+.remove-anim .fade {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */

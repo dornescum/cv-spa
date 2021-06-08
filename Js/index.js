@@ -41,7 +41,6 @@ sbFuture.addEventListener('click', () => {
 
 // loading
 const loading = getElement('.loading');
-console.log(loading)
 const hideLoading = () => {
     loading.classList.add('hide-loading')
 };
@@ -50,4 +49,24 @@ const hideLoading = () => {
 window.addEventListener("DOMContentLoaded", function () {
     setTimeout(hideLoading, 500);
 })
+// past
+const pastLeftBtn = document.getElementById('pastLeftBtn');
+const pastRightBtn = document.getElementById('pastRightBtn');
+const pastLeftCard = document.getElementById('past-left');
+const pastRightCard = document.getElementById('past-right');
+const cardPastR = document.getElementById('cardPastRight');
+// const hideBtn = () => {
+//     pastRightCard.classList.add('hide-loading')
+// };
+pastLeftBtn.addEventListener('click', () => {
+
+    pastLeftCard.classList.add('hide-loading')
+})
+pastRightBtn.addEventListener('click', () => {
+    // pastRightCard.classList.add('animate__fadeOut')
+    pastRightCard.classList.add('hide-loading')
+    // setTimeout(hideBtn, 500);
+})
+
+
 console.timeEnd("timer")

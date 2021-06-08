@@ -38,7 +38,7 @@
   }
   .navbar .nav-left .toggle-nav:hover {
     background: #ffffff;
-    transition: all 0.3s linear;
+    transition: all 0.2s linear;
   }
 }
 .navbar .nav-right .ul-links {
@@ -54,7 +54,7 @@
   text-decoration: none;
   text-transform: capitalize;
   color: #222;
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
 }
 .navbar .nav-right .ul-links .links a:hover {
   color: #ffd73a;
@@ -77,7 +77,7 @@
   z-index: -1;
   -webkit-transition: var(--transition);
   -o-transition: var(--transition);
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
   opacity: 0;
   background: rgba(0, 0, 0, 0.1);
 }
@@ -165,7 +165,7 @@
 }
 
 .row {
-  padding: 2rem 1rem;
+  padding: 1rem;
   margin: 2rem 0.5rem 1rem 0.5rem;
   display: flex;
   justify-content: center;
@@ -195,7 +195,7 @@
 .row .left-1 img {
   height: 15rem;
   filter: grayscale(100%);
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
 }
 .row .left-1 img:hover {
   filter: grayscale(0%);
@@ -274,7 +274,7 @@
   margin: 0.1rem;
   text-decoration: none;
   color: #222;
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
 }
 .footer a:hover {
   color: #ffd73a;
@@ -396,12 +396,19 @@ body {
   max-width: 650px;
   min-width: 400px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
   border-radius: 5px;
   background-color: #fafafa;
 }
 .card:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 1024px) {
+  .card {
+    width: 470px;
+    max-width: 480px;
+    min-width: 250px;
+  }
 }
 @media (max-width: 768px) {
   .card {
@@ -446,7 +453,7 @@ body {
   border: none;
   outline: none;
   border-radius: 100%;
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   color: #222;
 }
@@ -474,7 +481,7 @@ body {
   max-width: 400px;
   min-width: 300px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
   border-radius: 5px;
   background-color: #fafafa;
   display: flex;
@@ -484,9 +491,16 @@ body {
 .card-3:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+@media (max-width: 1024px) {
+  .card-3 {
+    width: 295px;
+    max-width: 280px;
+    min-width: 300px;
+  }
+}
 @media (max-width: 768px) {
   .card-3 {
-    width: 230px;
+    width: 210px;
     max-width: 250px;
     min-width: 200px;
   }
@@ -510,7 +524,7 @@ body {
   padding: 1rem;
   width: 100%;
   filter: grayscale(100%);
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
 }
 .card-3 .card-project img:hover {
   filter: grayscale(0%);
@@ -525,7 +539,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   color: #222;
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
   display: flex;
   justify-content: flex-end;
 }

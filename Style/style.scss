@@ -65,6 +65,12 @@ body {
   &:hover {
     box-shadow: $dark-shadow;
   }
+  @media (max-width: $tablet-bg) {
+    width:470px;
+    max-width: 480px;
+    min-width: 250px;
+
+  }
   @media (max-width: $tablet) {
     width: $tb-width;
     max-width: $tb-max-width;
@@ -143,10 +149,19 @@ body {
   &:hover {
     box-shadow: $dark-shadow;
   }
+  @media (max-width: $tablet-bg) {
+    //width: 295px;
+    //max-width: 400px;
+    //min-width: 250px;
+    width: $tb-bg-width;
+    max-width: $tb-bg-max-width;
+    min-width: $tb-bg-min-width;
+  }
   @media (max-width: $tablet) {
-    width: 230px;
+    width: 210px;
     max-width: 250px;
     min-width: 200px;
+
   }
   @media (max-width: $sm) {
     //padding: .5rem;

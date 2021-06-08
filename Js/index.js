@@ -87,37 +87,40 @@ footer.append(contact)
 // future
 const future = document.getElementById('future-start');
 const projects = [
-    {desc: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores fugititaque necessitatibus quis' +
-            ' repudiandae. Cupiditate dolor necessitatibus nulla porr ',
-        id: 1,
-        link:""
+    {desc: 'A basic html, css, javascript.',
+        id: 'p-1',
+        link:"http://misu.topo-online.ro/FirmeCadastruTemplate/index.html",
+        title:'Firme Cadastru',
+        img:''
     },
-     {desc: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores fugititaque necessitatibus quis' +
-            ' repudiandae. Cupiditate dolor necessitatibus nulla porr ',
-        id: 2,
-         link:""
-    },
-     {desc: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores fugititaque necessitatibus quis' +
-            ' repudiandae. Cupiditate dolor necessitatibus nulla porr ',
-        id: 3,
-         link:""
+     {desc: 'Html, css.modules, bootstrap, javascript.',
+        id: 'p-2',
+         link:"https://dornescum.github.io/Mihai-Dornescu/",
+         title:'Github Page',
+         img:''
+     },
+     {desc: 'Simple react app.',
+        id: 'p-3',
+         link:"https://apartament-1a2c9.web.app/",
+         title:'Vanzare',
+         img:''
     },
 ]
 
 window.addEventListener('DOMContentLoaded', ()=>{
     console.log(projects)
-    const mapPropjects = projects.map(({desc, id, link})=>{
+    const mapPropjects = projects.map(({desc, id, link, title})=>{
         return `
         
             <div class="row">
                 <div class="future" id="future-1">
-                    <div class="card-3">
+                    <div class="card-3" id=${id}>
                         <div class="card-project">
-                            <h5>project title</h5>
+                            <h5>${title}</h5>
                             <img src="https://images.unsplash.com/photo-1623090914209-ef27f7063db5?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
                                  alt="" class="projects-img">
                             <p class="card-desc">${desc}</p>
-                            <a href="" class="card-link">
+                            <a href=${link} class="card-link" target="_blank">
                                 <i class="fa fa-chevron-right" aria-hidden="true"></i>
                             </a>
                         </div>

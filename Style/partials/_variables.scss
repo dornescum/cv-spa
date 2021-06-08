@@ -35,9 +35,9 @@ $tb-min-width: 320px;
 $tb-max-width: 380px;
 $tb-width: 300px;
 
-//$tb-bg-min-width: 400px;
-//$tb-bg-max-width: 380px;
-//$tb-bg-width: 300px;
+$tb-bg-min-width: 300px;
+$tb-bg-max-width: 280px;
+$tb-bg-width: 295px;
 
 $md-width:600px;
 $md-max-width:650px;
@@ -48,7 +48,7 @@ $md-min-width:400px;
 
 $line-height: 1.6;
 $line-height-2: 1.4;
-$transition: all 0.3s linear;
+$transition: all 0.2s linear;
 $spacing: 0.1rem;
 $radius: 5px;
 $transform: translate3d(0, -1px, 0);

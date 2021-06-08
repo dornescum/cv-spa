@@ -65,7 +65,11 @@ body {
   &:hover {
     box-shadow: $dark-shadow;
   }
-
+  @media (max-width: $tablet) {
+    width: $tb-width;
+    max-width: $tb-max-width;
+    min-width: $tb-min-width;
+  }
   @media (max-width: $sm) {
     width: $sm-width;
     max-width: $sm-max-width;
@@ -82,6 +86,7 @@ body {
       animation-duration: 4s;
       text-transform: uppercase;
       @include display_flex;
+
       @media (max-width: $sm) {
         //padding: .5rem 0 0 3rem;
         @include flex-start;
@@ -100,11 +105,12 @@ body {
       border-radius: 100%;
       transition: $transition;
       box-shadow: $light-shadow;
+      color: $secondary-color;
 
       &:hover {
         box-shadow: $dark-shadow;
         //background-color: $secondary-color;
-        color: $main-color;
+        color: $yellow;
       }
     }
   }
@@ -137,7 +143,11 @@ body {
   &:hover {
     box-shadow: $dark-shadow;
   }
-
+  @media (max-width: $tablet) {
+    width: 230px;
+    max-width: 250px;
+    min-width: 200px;
+  }
   @media (max-width: $sm) {
     //padding: .5rem;
     width: $sm-width;

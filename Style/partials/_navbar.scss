@@ -60,6 +60,10 @@
           text-decoration: none;
           text-transform: capitalize;
           color: $secondary-color;
+          transition: $transition;
+          &:hover {
+            color: $yellow;
+          }
         }
       }
     }

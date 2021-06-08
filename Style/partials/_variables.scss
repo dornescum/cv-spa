@@ -7,14 +7,14 @@ $grey1: #bdbdbd;
 
 $white-1: #fafafa ;
 $black: #222;
-$red-dark: hsl(360, 67%, 44%);
-$red-dark-2:  #4e1609;
-$red-light: hsl(360, 71%, 66%);
-$green-dark: hsl(125, 67%, 44%);
-$green-light: hsl(125, 71%, 66%);
-$light-blue: lightblue;
-$blue-1: #0505ff;
-$blue-2: #000094;
+//$red-dark: hsl(360, 67%, 44%);
+//$red-dark-2:  #4e1609;
+//$red-light: hsl(360, 71%, 66%);
+//$green-dark: hsl(125, 67%, 44%);
+//$green-light: hsl(125, 71%, 66%);
+//$light-blue: lightblue;
+//$blue-1: #0505ff;
+//$blue-2: #000094;
 $yellow: #ffd73a;
 
 $font-size: 1.1rem;
@@ -23,12 +23,22 @@ $font-size-bg: 1.5rem;
 $font: 'Raleway';
 $sm: 600px;
 $tablet: 768px;
+$tablet-bg: 1024px;
 $desktop: 1366px;
 $lg-desktop: 1920px;
 
 $sm-min-width: 280px;
 $sm-max-width: 320px;
 $sm-width: 250px;
+
+$tb-min-width: 320px;
+$tb-max-width: 380px;
+$tb-width: 300px;
+
+//$tb-bg-min-width: 400px;
+//$tb-bg-max-width: 380px;
+//$tb-bg-width: 300px;
+
 $md-width:600px;
 $md-max-width:650px;
 $md-min-width:400px;
@@ -46,3 +56,28 @@ $light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 $dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 $max-width: 1170px;
 $fixed-width: 620px;
+
+//Breakpoints based on device
+@media only screen
+
+and (min-device-width: 375px)
+
+and (max-device-width: 667px)
+
+and (-webkit-min-device-pixel-ratio: 2)
+
+and (orientation: portrait) {
+
+}
+
+@media only screen
+
+and (min-device-width: 375px)
+
+and (max-device-width: 667px)
+
+and (-webkit-min-device-pixel-ratio: 2)
+
+and (orientation: landscape) {
+
+}

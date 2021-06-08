@@ -55,7 +55,7 @@ const pastLeftBtn = document.getElementById('pastLeftBtn');
 const pastRightBtn = document.getElementById('pastRightBtn');
 const pastLeftCard = document.getElementById('past-left');
 const pastRightCard = document.getElementById('past-right');
-const cardPastR = document.getElementById('cardPastRight');
+// const cardPastR = document.getElementById('cardPastRight');
 // const hideBtn = () => {
 //     pastRightCard.classList.add('hide-loading')
 // };
@@ -109,7 +109,7 @@ const projects = [
 
 window.addEventListener('DOMContentLoaded', ()=>{
     console.log(projects)
-    const mapPropjects = projects.map(({desc, id, link, title})=>{
+    future.innerHTML = projects.map(({desc, id, link, title})=>{
         return `
         
             <div class="row">
@@ -130,7 +130,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
             </div>
         `
     }).join('');
-    future.innerHTML =mapPropjects;
+    // future.innerHTML =mapPropjects;
 })
 
     console.timeEnd("timer")

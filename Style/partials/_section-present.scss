@@ -34,6 +34,10 @@
     //width: 12rem;
     //padding-left: 3rem;
     filter: grayscale(100%);
+    transition: $transition;
+    &:hover {
+      filter: grayscale(0%);
+    }
     @media (max-width: $sm) {
       padding: 1rem 0;
       height: 20rem;

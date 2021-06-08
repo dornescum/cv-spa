@@ -1,4 +1,5 @@
 console.time("timer")
+
 const getElement = (selection) => {
     const element = document.querySelector(selection);
     if (element) return element;
@@ -68,5 +69,18 @@ pastRightBtn.addEventListener('click', () => {
     // setTimeout(hideBtn, 500);
 })
 
+//footer
+const footer = document.getElementById('footer');
+
+const contact = document.createElement('div');
+console.log(contact)
+contact.innerHTML=`<a href="tel:0762369717">
+<i class="fas fa-phone"></i>
+</a>
+<a href="mailto:webmaster@example.com">
+<i class="far fa-envelope-open"></i>
+</a>`
+
+footer.append(contact)
 
 console.timeEnd("timer")

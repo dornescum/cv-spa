@@ -190,6 +190,10 @@
 .row .left-1 img {
   height: 15rem;
   filter: grayscale(100%);
+  transition: all 0.3s linear;
+}
+.row .left-1 img:hover {
+  filter: grayscale(0%);
 }
 @media (max-width: 600px) {
   .row .left-1 img {
@@ -237,6 +241,31 @@
     min-width: 250px;
     text-align: justify;
     padding: 0.2rem;
+    margin: 0.1rem;
+  }
+}
+
+.disabled {
+  opacity: 0.2;
+}
+
+.footer {
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.footer a {
+  padding: 0.2rem 4rem;
+  margin: 0.1rem;
+  text-decoration: none;
+  color: #222;
+}
+@media (max-width: 600px) {
+  .footer a {
+    padding: 0.1rem;
     margin: 0.1rem;
   }
 }
@@ -292,6 +321,18 @@
   }
   50% {
     opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fadeInLeft {
+  animation: fade-in-left 2s ease-in;
+}
+
+@keyframes fade-in-left {
+  0% {
+    opacity: 0;
   }
   100% {
     opacity: 1;
@@ -358,6 +399,7 @@ body {
   margin: 0.2rem 0.5rem;
   background-color: #ffffff;
   animation-duration: 4s;
+  text-transform: uppercase;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -391,7 +433,6 @@ body {
   justify-content: flex-start;
   padding: 0.5rem 0 0 6rem;
   text-transform: capitalize;
-  font-size: 1.5rem;
 }
 @media (max-width: 600px) {
   .title {
@@ -435,6 +476,10 @@ body {
   padding: 1rem;
   width: 100%;
   filter: grayscale(100%);
+  transition: all 0.3s linear;
+}
+.card-3 .card-project img:hover {
+  filter: grayscale(0%);
 }
 .card-3 .card-project .card-desc {
   padding: 0.1rem 1.1rem 0.1rem 1.1rem;
@@ -446,8 +491,12 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   color: #222;
+  transition: all 0.3s linear;
   display: flex;
   justify-content: flex-end;
+}
+.card-3 .card-project .card-link:hover {
+  color: #ffd73a;
 }
 
 /*# sourceMappingURL=style.css.map */

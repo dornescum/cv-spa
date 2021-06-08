@@ -5,6 +5,7 @@
 @import "partials/section-present";
 @import "partials/section-past";
 @import "partials/section-future";
+@import "partials/footer";
 @import "modules/animate";
 
 * {
@@ -79,6 +80,7 @@ body {
       margin: .2rem .5rem;
       background-color: $main-color;
       animation-duration: 4s;
+      text-transform: uppercase;
       @include display_flex;
       @media (max-width: $sm) {
         //padding: .5rem 0 0 3rem;
@@ -112,7 +114,8 @@ body {
   @include flex-start;
   padding: .5rem 0 0 6rem;
   text-transform: capitalize;
-  font-size: $font-size-bg;
+  //font-weight: 100;
+  //font-size: $font-size-bg;
   @media (max-width: $sm) {
     padding: 1rem 0 0 3rem;
   }
@@ -158,8 +161,10 @@ body {
       //width: 15rem;
       width: 100%;
       filter: grayscale(100%);
-
-
+      transition: $transition;
+      &:hover {
+        filter: grayscale(0%);
+      }
     }
 
     .card-desc {
@@ -175,7 +180,11 @@ body {
       text-decoration: none;
       text-transform: uppercase;
       color: $secondary-color;
+      transition: $transition;
       @include flex-end;
+      &:hover {
+      color: $yellow;
+      }
     }
   }
 

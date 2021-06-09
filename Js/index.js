@@ -90,33 +90,35 @@ const projects = [
         id: 'p-1',
         link:"http://misu.topo-online.ro/FirmeCadastruTemplate/index.html",
         title:'Firme Cadastru',
-        img:''
+        img:'@../../assets/img/rv.png'
     },
      {desc: 'Html, css, bootstrap, javascript.',
         id: 'p-2',
          link:"https://dornescum.github.io/Mihai-Dornescu/",
          title:'Github Page',
-         img:''
+         img:'@../../assets/img/rv.png'
      },
-     {desc: 'Simple react app.',
+     {desc: 'Simple react web app.',
         id: 'p-3',
          link:"https://apartament-1a2c9.web.app/",
          title:'Vanzare',
-         img:''
+         img:'@../../assets/img/rv.png'
     },
 ]
 
 window.addEventListener('DOMContentLoaded', ()=>{
-    future.innerHTML = projects.map(({desc, id, link, title})=>{
+    future.innerHTML = projects.map(({desc, id, link, title, img})=>{
         return `
         
 <!--            <div class="row">-->
                 <div class="future" id="future-1">
                     <div class="card-3" id=${id}>
                         <div class="card-project">
-                            <h5>${title}</h5>
-                            <img src="https://images.unsplash.com/photo-1623090914209-ef27f7063db5?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                                 alt="" class="projects-img">
+                            <p class="title-project">${title}</p>
+<!--     <img src="https://images.unsplash.com/photo-1623090914209-ef27f7063db5?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"-->
+                              
+<!--                                 alt="" class="projects-img">-->
+                            <img src=${img} alt={title}>
                             <p class="card-desc">${desc}</p>
                             <a href=${link} class="card-link" target="_blank">
                                 <i class="fa fa-chevron-right" aria-hidden="true"></i>

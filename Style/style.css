@@ -15,6 +15,13 @@
   justify-items: center;
   align-items: center;
   padding-left: 2rem;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #222;
+  transition: all 0.2s linear;
+}
+.navbar .nav-left .logo:hover {
+  color: #ffd73a;
 }
 @media (max-width: 600px) {
   .navbar .nav-left .logo {
@@ -259,6 +266,22 @@
 
 .disabled {
   opacity: 0.2;
+}
+
+.future .title-project {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0.5rem 0 0 1.1rem;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+@media (max-width: 600px) {
+  .future .title-project {
+    padding: 1rem 0 0 3rem;
+  }
+}
+.future .title-project p {
+  font-size: 1.2rem;
 }
 
 .footer {

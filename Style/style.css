@@ -289,6 +289,82 @@
   }
 }
 
+#html {
+  animation: anim-left 2s ease-in;
+}
+
+#css {
+  animation: anim-left 2.5s ease-in;
+}
+
+#bootstrap {
+  animation: anim-left 3s ease-in;
+}
+
+#sccs {
+  animation: anim-left 3.5s ease-in;
+}
+
+@keyframes anim-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#typescript {
+  animation: anim-right 2s ease-in;
+}
+
+#react {
+  animation: anim-right 2.5s ease-in;
+}
+
+#next {
+  animation: anim-right 3s ease-in;
+}
+
+#vue {
+  animation: anim-right 3.5s ease-in;
+}
+
+@keyframes anim-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fadeInLeft {
+  animation: fade-in-left 2s ease-in;
+}
+
+@keyframes fade-in-left {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in-bottom {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .cookie-container {
   position: fixed;
   bottom: 0;
@@ -297,6 +373,7 @@
   transition: all 0.2s linear;
   background-color: #222;
   color: #ffffff;
+  animation: fade-in-bottom 2s ease-in;
 }
 .cookie-container p {
   margin: 24px 0;
@@ -321,6 +398,10 @@
 .cookie-container .cookie-btn:hover {
   background: #ffd73a;
   color: #222;
+}
+
+.active {
+  display: none;
 }
 
 #html {
@@ -389,6 +470,14 @@
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes fade-in-bottom {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 * {

@@ -80,3 +80,11 @@
     opacity: 1;
   }
 }
+@keyframes fade-in-bottom {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

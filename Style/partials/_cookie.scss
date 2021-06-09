@@ -1,5 +1,6 @@
 @import "variables";
 @import "mixins";
+@import "../modules/animate";
 
 
 .cookie-container {
@@ -10,6 +11,7 @@
   transition: $transition;
   background-color: $secondary-color;
   color: $main-color;
+  animation: fade-in-bottom 2s ease-in;
 
   p {
     margin: 24px 0;
@@ -37,9 +39,9 @@
   }
 
 }
-//.active {
-//  display: none;
-//}
+.active {
+  display: none;
+}
 
 //.cookie-container {
 //  position: fixed;

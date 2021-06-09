@@ -136,8 +136,13 @@ const cookieContainer = document.querySelector(".cookie-container");
 const cookieButton = document.querySelector(".cookie-btn");
 console.log(cookieButton)
 
+setTimeout(() => {
+   cookieContainer.classList.add('active')
+}, 5000);
+
 cookieButton.addEventListener("click", () => {
     cookieContainer.classList.add("hide-loading");
+    cookieContainer.classList.remove("active");
     localStorage.setItem("cookieBannerDisplayed", "true");
 });
 
@@ -145,6 +150,6 @@ setTimeout(() => {
     if (!localStorage.getItem("cookieBannerDisplayed")) {
         cookieContainer.classList.remove("hide-loading");
     }
-}, 100);
+}, 5000);
 
     console.timeEnd("timer")

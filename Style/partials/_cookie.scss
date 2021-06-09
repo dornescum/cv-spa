@@ -7,10 +7,13 @@
   position: fixed;
   bottom: 0;
   left: 0;
+  width: 100%;
   padding: 0 80px;
   transition: $transition;
-  background-color: $secondary-color;
-  color: $main-color;
+  background-color: $white-1;
+  color: $secondary-color;
+  display: none;
+  border-radius: $radius;
   animation: fade-in-bottom 2s ease-in;
 
   p {
@@ -23,8 +26,8 @@
     }
   }
   .cookie-btn {
-    background: $main-color;
-    color: $secondary-color;
+    background: $secondary-color;
+    color: $main-color;
     border: 0;
     padding: 12px 48px;
     font-size: 18px;
@@ -33,14 +36,14 @@
     cursor: pointer;
     transition: $transition;
     &:hover{
-      background: $yellow;
-      color: $secondary-color;
+      color: $yellow;
+      background-color: $secondary-color;
     }
   }
 
 }
 .active {
-  display: none;
+  display: block;
 }
 
 //.cookie-container {

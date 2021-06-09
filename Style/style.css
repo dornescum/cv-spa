@@ -166,7 +166,7 @@
 
 .row {
   padding: 1rem;
-  margin: 2rem 0.5rem 1rem 0.5rem;
+  margin: 0.2rem 0.5rem 1rem 0.5rem;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -287,6 +287,40 @@
   .footer a:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
+}
+
+.cookie-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 0 80px;
+  transition: all 0.2s linear;
+  background-color: #222;
+  color: #ffffff;
+}
+.cookie-container p {
+  margin: 24px 0;
+  line-height: 2;
+}
+.cookie-container p a {
+  color: #ffd73a;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.cookie-container .cookie-btn {
+  background: #ffffff;
+  color: #222;
+  border: 0;
+  padding: 12px 48px;
+  font-size: 18px;
+  margin-bottom: 16px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.cookie-container .cookie-btn:hover {
+  background: #ffd73a;
+  color: #222;
 }
 
 #html {
@@ -472,6 +506,9 @@ body {
   .title {
     padding: 1rem 0 0 3rem;
   }
+}
+.title p {
+  font-size: 1.2rem;
 }
 
 .card-3 {

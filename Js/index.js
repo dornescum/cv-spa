@@ -73,7 +73,6 @@ pastRightBtn.addEventListener('click', () => {
 const footer = document.getElementById('footer');
 
 const contact = document.createElement('div');
-console.log(contact)
 contact.innerHTML = `
         <a href="tel:0762369717">
         <i class="fas fa-phone"></i>
@@ -93,7 +92,7 @@ const projects = [
         title:'Firme Cadastru',
         img:''
     },
-     {desc: 'Html, css.modules, bootstrap, javascript.',
+     {desc: 'Html, css, bootstrap, javascript.',
         id: 'p-2',
          link:"https://dornescum.github.io/Mihai-Dornescu/",
          title:'Github Page',
@@ -108,11 +107,10 @@ const projects = [
 ]
 
 window.addEventListener('DOMContentLoaded', ()=>{
-    console.log(projects)
     future.innerHTML = projects.map(({desc, id, link, title})=>{
         return `
         
-            <div class="row">
+<!--            <div class="row">-->
                 <div class="future" id="future-1">
                     <div class="card-3" id=${id}>
                         <div class="card-project">
@@ -127,10 +125,26 @@ window.addEventListener('DOMContentLoaded', ()=>{
                     </div>
                 </div>
             
-            </div>
+<!--            </div>-->
         `
     }).join('');
     // future.innerHTML =mapPropjects;
 })
+
+// =======cookie====
+const cookieContainer = document.querySelector(".cookie-container");
+const cookieButton = document.querySelector(".cookie-btn");
+console.log(cookieButton)
+
+cookieButton.addEventListener("click", () => {
+    cookieContainer.classList.add("hide-loading");
+    localStorage.setItem("cookieBannerDisplayed", "true");
+});
+
+setTimeout(() => {
+    if (!localStorage.getItem("cookieBannerDisplayed")) {
+        cookieContainer.classList.remove("hide-loading");
+    }
+}, 100);
 
     console.timeEnd("timer")

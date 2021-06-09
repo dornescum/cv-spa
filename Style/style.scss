@@ -6,6 +6,7 @@
 @import "partials/section-past";
 @import "partials/section-future";
 @import "partials/footer";
+@import "partials/cookie";
 @import "modules/animate";
 
 * {
@@ -131,6 +132,9 @@ body {
   @media (max-width: $sm) {
     padding: 1rem 0 0 3rem;
   }
+  p{
+    font-size: 1.2rem;
+  }
 }
 
 .card-3 {
@@ -215,3 +219,8 @@ body {
 
 
 }
+
+//
+//.active{
+//  display: block;
+//}

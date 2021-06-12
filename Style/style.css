@@ -222,11 +222,14 @@
   }
 }
 .row .right-1 {
-  padding: 0.2rem 6rem 0.2rem 0.2rem;
-  margin: 0.1rem 4rem 0.1rem 0.1rem;
-  width: 950px;
-  max-width: 1050px;
-  min-width: 700px;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 1rem;
+  width: 600px;
+  max-width: 650px;
+  min-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 @media (max-width: 1366px) {
   .row .right-1 {
@@ -255,6 +258,17 @@
     max-width: 320px;
     min-width: 280px;
   }
+}
+.row li {
+  padding: 0.5rem;
+}
+.row a {
+  padding: 0.5rem 0;
+  text-decoration: none;
+  color: #222;
+}
+.row span {
+  padding-left: 1rem;
 }
 
 .past .past-left {
@@ -535,6 +549,20 @@
     transform: translateY(0);
   }
 }
+#presentation .about {
+  padding: 0 3rem;
+  margin: 0 3rem;
+}
+#presentation .about-title {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+#presentation p {
+  width: 1200px;
+  margin: 2rem auto;
+  line-height: 1.9rem;
+}
+
 * {
   margin: 0;
   padding: 0;

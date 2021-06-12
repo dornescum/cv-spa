@@ -28,6 +28,7 @@
       //display: block;
 
     }
+
     img {
       height: 15rem;
       //width: 12rem;
@@ -47,11 +48,17 @@
   }
 
   .right-1 {
-    padding: .2rem 6rem .2rem .2rem;
-    margin: .1rem 4rem .1rem .1rem;
-    width: $lg-width;
-    max-width: $lg-max-width;
-    min-width: $lg-min-width;
+    //padding: .2rem 6rem .2rem .2rem;
+    //margin: .1rem 4rem .1rem .1rem;
+    //width: $lg-width;
+    //max-width: $lg-max-width;
+    //min-width: $lg-min-width;
+    padding: .5rem 1rem;
+    margin: .5rem 1rem;
+    width: $md-width;
+    max-width: $md-max-width;
+    min-width: $md-min-width;
+    @include display_flex;
     @media (max-width: $desktop) {
       padding: .2rem 1rem .2rem .2rem;
       margin: .1rem 6rem .1rem .1rem;
@@ -76,5 +83,18 @@
       min-width: $sm-min-width;
 
     }
+  }
+
+  li {
+    padding: .5rem;
+  }
+
+  a {
+    padding: .5rem 0;
+    text-decoration: none;
+    color: $secondary-color;
+  }
+  span {
+    padding-left: 1rem;
   }
 }

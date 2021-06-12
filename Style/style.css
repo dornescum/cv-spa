@@ -192,11 +192,19 @@
   justify-content: center;
   align-content: center;
 }
+@media (max-width: 768px) {
+  .row .left-1 {
+    display: none;
+  }
+}
 @media (max-width: 600px) {
   .row .left-1 {
     width: 250px;
     max-width: 320px;
     min-width: 280px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
   }
 }
 .row .left-1 img {
@@ -214,8 +222,29 @@
   }
 }
 .row .right-1 {
-  padding: 0.2rem 2rem 0.2rem 0.2rem;
-  margin: 0.1rem 1rem 0.1rem 0.1rem;
+  padding: 0.2rem 6rem 0.2rem 0.2rem;
+  margin: 0.1rem 4rem 0.1rem 0.1rem;
+  width: 950px;
+  max-width: 1050px;
+  min-width: 700px;
+}
+@media (max-width: 1366px) {
+  .row .right-1 {
+    padding: 0.2rem 1rem 0.2rem 0.2rem;
+    margin: 0.1rem 6rem 0.1rem 0.1rem;
+  }
+}
+@media (max-width: 1024px) {
+  .row .right-1 {
+    padding: 0.2rem 6rem 0.2rem 0.2rem;
+    margin: 0.1rem 0 0.1rem 0.1rem;
+  }
+}
+@media (max-width: 768px) and (orientation: portrait) {
+  .row .right-1 {
+    padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+    margin: 0.1rem 0.2rem 0.1rem 0.1rem;
+  }
 }
 @media (max-width: 600px) {
   .row .right-1 {
@@ -614,12 +643,22 @@ body {
 .title {
   display: flex;
   justify-content: flex-start;
-  padding: 0.5rem 0 0 6rem;
+  padding: 0.5rem 0 0 22rem;
   text-transform: capitalize;
+}
+@media (max-width: 1366px) {
+  .title {
+    padding: 0.5rem 0 0 8rem;
+  }
+}
+@media (max-width: 1024px) {
+  .title {
+    padding: 0.5rem 0 0 4rem;
+  }
 }
 @media (max-width: 600px) {
   .title {
-    padding: 1rem 0 0 3rem;
+    padding: 1rem 0 0 4rem;
   }
 }
 .title p {

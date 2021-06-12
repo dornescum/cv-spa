@@ -2,8 +2,7 @@
 @import "mixins";
 
 
-
-.row  {
+.row {
   padding: 1rem;
   margin: .2rem .5rem 1rem .5rem;
   @include display_flex;
@@ -11,36 +10,60 @@
     flex-wrap: wrap;
     padding: 0.1rem;
   }
-  .left-1{
-    width: 300px ;
+
+  .left-1 {
+    width: 300px;
     max-width: 450px;
     min-width: 400px;
     @include display_flex;
-
+    @media (max-width: $tablet) {
+      display: none;
+    }
     @media (max-width: $sm) {
       width: $sm-width;
       max-width: $sm-max-width;
       min-width: $sm-min-width;
-    }
+      @include display_flex;
 
-  img  {
-    height: 15rem;
-    //width: 12rem;
-    //padding-left: 3rem;
-    filter: grayscale(100%);
-    transition: $transition;
-    &:hover {
-      filter: grayscale(0%);
+      //display: block;
+
     }
-    @media (max-width: $sm) {
-      padding: 1rem 0;
-      height: 20rem;
+    img {
+      height: 15rem;
+      //width: 12rem;
+      //padding-left: 3rem;
+      filter: grayscale(100%);
+      transition: $transition;
+
+      &:hover {
+        filter: grayscale(0%);
+      }
+
+      @media (max-width: $sm) {
+        padding: 1rem 0;
+        height: 20rem;
+      }
     }
   }
-  }
-  .right-1{
-    padding: .2rem 2rem .2rem .2rem;
-    margin: .1rem 1rem .1rem .1rem;
+
+  .right-1 {
+    padding: .2rem 6rem .2rem .2rem;
+    margin: .1rem 4rem .1rem .1rem;
+    width: $lg-width;
+    max-width: $lg-max-width;
+    min-width: $lg-min-width;
+    @media (max-width: $desktop) {
+      padding: .2rem 1rem .2rem .2rem;
+      margin: .1rem 6rem .1rem .1rem;
+    }
+    @media (max-width: $tablet-bg) {
+      padding: .2rem 6rem .2rem .2rem;
+      margin: .1rem 0 .1rem .1rem;
+    }
+    @media (max-width: $tablet) and (orientation: portrait) {
+      padding: .2rem 0.2rem .2rem .2rem;
+      margin: .1rem 0.2rem .1rem .1rem;
+    }
     @media (max-width: $sm) {
       //width: 280px ;
       //max-width: 320px;

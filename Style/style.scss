@@ -125,12 +125,21 @@ body {
 
 .title {
   @include flex-start;
-  padding: .5rem 0 0 6rem;
+  padding: .5rem 0 0 22rem;
   text-transform: capitalize;
   //font-weight: 100;
   //font-size: $font-size-bg;
+  @media (max-width: $desktop) {
+    //padding: 1rem 0;
+    padding: .5rem 0 0 8rem;
+  }
+  @media (max-width: $tablet-bg) {
+    //padding: 1rem 0;
+    padding: .5rem 0 0 4rem;
+  }
+
   @media (max-width: $sm) {
-    padding: 1rem 0 0 3rem;
+    padding: 1rem 0 0 4rem;
   }
   p{
     font-size: 1.2rem;

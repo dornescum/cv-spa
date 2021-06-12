@@ -140,7 +140,7 @@ console.log(cookieButton)
 
 setTimeout(() => {
    cookieContainer.classList.add('active')
-}, 5000);
+}, 15000);
 
 cookieButton.addEventListener("click", () => {
     cookieContainer.classList.add("hide-loading");

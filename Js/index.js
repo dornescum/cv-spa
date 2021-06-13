@@ -90,7 +90,7 @@ const projects = [
         id: 'p-1',
         link:"http://misu.topo-online.ro/FirmeCadastruTemplate/index.html",
         title:'Firme Cadastru',
-        img:'@../../assets/img/Living.webp',
+        img:'@../../assets/img/worker.webp',
         icon: 'fas fa-camera fa-lg'
 
     },
@@ -98,7 +98,7 @@ const projects = [
         id: 'p-2',
          link:"https://dornescum.github.io/Mihai-Dornescu/",
          title:'Github Page',
-         img:'@../../assets/img/Living.webp',
+         img:'@../../assets/img/github.webp',
          icon: 'fas fa-camera fa-lg'
 
      },
@@ -106,7 +106,7 @@ const projects = [
         id: 'p-3',
          link:"https://apartament-1a2c9.web.app/",
          title:'Vanzare',
-         img:'@../../assets/img/Living.webp',
+         img:'@../../assets/img/Living-1.webp',
          icon: 'fas fa-camera fa-lg'
     },
 ]
@@ -123,7 +123,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
 <!--     <img src="https://images.unsplash.com/photo-1623090914209-ef27f7063db5?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"-->
                               
 <!--                                 alt="" class="projects-img">-->
-                             <img src=${img} alt={title}>
+                             <img src=${img} alt={title} loading="lazy">
                             <p class="card-desc">${desc}</p>
                             <a href=${link} class="card-link" target="_blank">
                                 <i class="fa fa-chevron-right" aria-hidden="true"></i>

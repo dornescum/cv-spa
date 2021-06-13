@@ -7,13 +7,13 @@ $grey1: #bdbdbd;
 
 $white-1: #fafafa ;
 $black: #222;
-//$red-dark: hsl(360, 67%, 44%);
-//$red-dark-2:  #4e1609;
+$red-dark: hsl(360, 67%, 44%);
+$red-dark-2:  #4e1609;
 //$red-light: hsl(360, 71%, 66%);
-//$green-dark: hsl(125, 67%, 44%);
+$green-dark: hsl(125, 67%, 44%);
 //$green-light: hsl(125, 71%, 66%);
 //$light-blue: lightblue;
-//$blue-1: #0505ff;
+$blue-1: #0505ff;
 //$blue-2: #000094;
 $yellow: #ffd73a;
 
@@ -21,6 +21,7 @@ $font-size: 1.1rem;
 $font-size-sm:.9rem;
 $font-size-bg: 1.5rem;
 $font: 'Raleway';
+
 $sm: 600px;
 $tablet: 768px;
 $tablet-bg: 1024px;

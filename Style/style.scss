@@ -198,12 +198,23 @@ body {
     img {
       padding: 1rem;
       //width: 15rem;
+      height: 18rem;
       width: 100%;
       filter: grayscale(100%);
       transition: $transition;
       &:hover {
         filter: grayscale(0%);
       }
+      @media (max-width: $tablet-bg) {
+      height: 13rem;
+      }
+      @media (max-width: $tablet) {
+        height: 10rem;
+      }
+        @media (max-width: $sm) {
+        height: 13rem;
+      }
+
     }
 
     .card-desc {

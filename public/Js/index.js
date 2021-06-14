@@ -55,18 +55,12 @@ const pastLeftBtn = document.getElementById('pastLeftBtn');
 const pastRightBtn = document.getElementById('pastRightBtn');
 const pastLeftCard = document.getElementById('past-left');
 const pastRightCard = document.getElementById('past-right');
-// const cardPastR = document.getElementById('cardPastRight');
-// const hideBtn = () => {
-//     pastRightCard.classList.add('hide-loading')
-// };
-pastLeftBtn.addEventListener('click', () => {
 
+pastLeftBtn.addEventListener('click', () => {
     pastLeftCard.classList.add('hide-loading')
 })
 pastRightBtn.addEventListener('click', () => {
-    // pastRightCard.classList.add('animate__fadeOut')
     pastRightCard.classList.add('hide-loading')
-    // setTimeout(hideBtn, 500);
 })
 
 //footer
@@ -86,65 +80,66 @@ footer.append(contact)
 // future
 const future = document.getElementById('future-start');
 const projects = [
-    {desc: 'A basic html, css, javascript.',
+    {
+        desc: 'A basic html, css, javascript.',
         id: 'p-1',
-        link:"http://misu.topo-online.ro/FirmeCadastruTemplate/index.html",
-        title:'Firme Cadastru',
-        img:'@../../assets/img/worker.webp',
+        link: "http://misu.topo-online.ro/FirmeCadastruTemplate/index.html",
+        title: 'Firme Cadastru',
+        img: '@../../assets/img/worker.webp',
         icon: 'fas fa-camera fa-lg'
 
     },
-     {desc: 'Html, css, bootstrap, javascript.',
+    {
+        desc: 'Html, css, bootstrap, javascript.',
         id: 'p-2',
-         link:"https://dornescum.github.io/Mihai-Dornescu/",
-         title:'Github Page',
-         img:'@../../assets/img/github.webp',
-         icon: 'fas fa-camera fa-lg'
+        link: "https://dornescum.github.io/Mihai-Dornescu/",
+        title: 'Github Page',
+        img: '@../../assets/img/github.webp',
+        icon: 'fas fa-camera fa-lg'
 
-     },
-     {desc: 'Simple react web app.',
-        id: 'p-3',
-         link:"https://apartament-1a2c9.web.app/",
-         title:'Vanzare',
-         img:'@../../assets/img/Living-1.webp',
-         icon: 'fas fa-camera fa-lg'
     },
+    {
+        desc: 'Simple react web app.',
+        id: 'p-3',
+        link: "https://apartament-1a2c9.web.app/",
+        title: 'Apartament sale',
+        img: '@../../assets/img/Living-1.webp',
+        icon: 'fas fa-camera fa-lg'
+    },
+    {
+        desc: 'Html, css, javascript ',
+        id: 'p-4',
+        link: "http://pi-frontend.cpco.ro/index.html",
+        title: 'voluntary work',
+        img: '@../../assets/img/volunteer.webp',
+        icon: 'fas fa-camera fa-lg'
+    },
+
 ]
 
-window.addEventListener('DOMContentLoaded', ()=>{
-    future.innerHTML = projects.map(({desc, id, link, title, img, icon})=>{
+window.addEventListener('DOMContentLoaded', () => {
+    future.innerHTML = projects.map(({desc, id, link, title, img, icon}) => {
         return `
-        
-<!--            <div class="row">-->
-                <div class="future" id="future-1">
                     <div class="card-3" id=${id}>
                         <div class="card-project">
                             <p class="title-project">${title}</p>
-<!--     <img src="https://images.unsplash.com/photo-1623090914209-ef27f7063db5?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"-->
-                              
-<!--                                 alt="" class="projects-img">-->
                              <img src=${img} alt={title} loading="lazy">
-                            <p class="card-desc">${desc}</p>
+                            <p class="card-desc" id="open">${desc}</p>
                             <a href=${link} class="card-link" target="_blank">
                                 <i class="fa fa-chevron-right" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>
-                </div>
-            
-<!--            </div>-->
         `
     }).join('');
-    // future.innerHTML =mapPropjects;
 })
 
 // =======cookie====
 const cookieContainer = document.querySelector(".cookie-container");
 const cookieButton = document.querySelector(".cookie-btn");
-console.log(cookieButton)
 
 setTimeout(() => {
-   cookieContainer.classList.add('active')
+    cookieContainer.classList.add('active')
 }, 15000);
 
 cookieButton.addEventListener("click", () => {
@@ -159,4 +154,4 @@ setTimeout(() => {
     }
 }, 5000);
 
-    console.timeEnd("timer")
+console.timeEnd("timer")

@@ -128,6 +128,7 @@ body {
   @include flex-start;
   padding: .5rem 0 0 22rem;
   text-transform: capitalize;
+
   //font-weight: 100;
   //font-size: $font-size-bg;
   @media (max-width: $desktop) {
@@ -148,25 +149,24 @@ body {
 }
 
 .card-3 {
-  //background-color: red;
   padding: 1rem;
-  margin: .5rem;
-  width: 390px;
+  margin: .3rem;
+  width: 300px;
   max-width: 400px;
-  min-width: 300px;
+  min-width: 270px;
   box-shadow: $light-shadow;
   transition: $transition;
   border-radius: $radius;
   background-color: $white-1;
   @include display_flex;
-
+  height: 22rem;
   &:hover {
     box-shadow: $dark-shadow;
   }
+  @media (max-width: $desktop) {
+    margin: .1rem;
+  }
   @media (max-width: $tablet-bg) {
-    //width: 295px;
-    //max-width: 400px;
-    //min-width: 250px;
     width: $tb-bg-width;
     max-width: $tb-bg-max-width;
     min-width: $tb-bg-min-width;
@@ -175,30 +175,32 @@ body {
     width: 210px;
     max-width: 250px;
     min-width: 200px;
-
+    height: 21rem;
   }
   @media (max-width: $sm) {
     //padding: .5rem;
     width: $sm-width;
     max-width: $sm-max-width;
     min-width: $sm-min-width;
+    height: 23rem;
+    margin: .2rem;
   }
 
   .card-project {
-    //background-color: blue;
     width: 100%;
-
-    h5 {
-      //color: green;
+    .title-project {
+      @include flex-start;
+      padding: .5rem 0 0 1.1rem;
       text-transform: capitalize;
-      font-size: 1.2rem;
-      padding: .1rem 0 .1rem 1.1rem;
+      font-weight: 400;
+      @media (max-width: $sm) {
+        padding: 1rem 0 0 3rem;
+      }
     }
-
     img {
       padding: 1rem;
       //width: 15rem;
-      height: 18rem;
+      height: 13rem;
       width: 100%;
       filter: grayscale(100%);
       transition: $transition;
@@ -214,14 +216,11 @@ body {
         @media (max-width: $sm) {
         height: 13rem;
       }
-
     }
 
     .card-desc {
-      //font-size: 30px;
       padding: .1rem 1.1rem .1rem 1.1rem;
       text-align: justify;
-
     }
 
     .card-link {
@@ -237,11 +236,5 @@ body {
       }
     }
   }
-
-
 }
 
-//
-//.active{
-//  display: block;
-//}

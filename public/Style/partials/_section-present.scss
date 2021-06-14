@@ -6,6 +6,7 @@
   padding: 1rem;
   margin: .2rem .5rem 1rem .5rem;
   @include display_flex;
+  flex-wrap: wrap;
   @media (max-width: $sm) {
     flex-wrap: wrap;
     padding: 0.1rem;
@@ -14,8 +15,23 @@
   .left-1 {
     width: 300px;
     max-width: 450px;
-    min-width: 400px;
+    min-width: 200px;
     @include display_flex;
+    @media  (max-width: $desktop){
+      width:270px;
+      max-width: 400px;
+      min-width: 200px;
+    }
+    @media  (max-width: $tablet-bg){
+    width: 250px;
+    max-width: 300px;
+    min-width: 180px;
+    }
+    @media (max-width: 925px) {
+      width: 220px;
+      max-width: 250px;
+      min-width: 150px;
+    }
     @media (max-width: $tablet) {
       display: none;
     }
@@ -24,18 +40,13 @@
       max-width: $sm-max-width;
       min-width: $sm-min-width;
       @include display_flex;
-
-      //display: block;
-
     }
 
     img {
       height: 15rem;
-      //width: 12rem;
-      //padding-left: 3rem;
       filter: grayscale(100%);
       transition: $transition;
-
+      cursor: pointer;
       &:hover {
         filter: grayscale(0%);
       }
@@ -48,11 +59,6 @@
   }
 
   .right-1 {
-    //padding: .2rem 6rem .2rem .2rem;
-    //margin: .1rem 4rem .1rem .1rem;
-    //width: $lg-width;
-    //max-width: $lg-max-width;
-    //min-width: $lg-min-width;
     padding: .5rem 1rem;
     margin: .5rem 1rem;
     width: $md-width;
@@ -66,10 +72,20 @@
     @media (max-width: $tablet-bg) {
       padding: .2rem 6rem .2rem .2rem;
       margin: .1rem 0 .1rem .1rem;
+
     }
-    @media (max-width: $tablet) and (orientation: portrait) {
+    @media (max-width: 900px) {
+      width: $sm-width;
+      max-width: $sm-max-width;
+      min-width: $sm-min-width;
+      padding: .2rem 0 .2rem .2rem;
+      margin: .1rem 0 .1rem .1rem;
+    }
+
+    @media (max-width: $tablet) {
       padding: .2rem 0.2rem .2rem .2rem;
       margin: .1rem 0.2rem .1rem .1rem;
+
     }
     @media (max-width: $sm) {
       text-align: justify;
@@ -92,14 +108,9 @@
 
   .info-link {
     padding: .5rem;
-    //=============
     transition: $transition;
-    //text-shadow: 1px -1px 0 $secondary-color;
-    //-1px 1px 0 $secondary-color;
-    //-1px 1px 0 $secondary-color,
-    //1px -1px 0 $secondary-color;
+    color: $secondary-color;
   }
-
   .info-link:hover {
     color: $main-color;
     transition: .8s ease-out;
@@ -146,7 +157,8 @@
     color: $secondary-color;
     transition: $transition;
   }
-  .info-a:hover{
+
+  .info-a:hover {
     color: $main-color;
     transition: .8s ease-out;
     text-shadow: 1px -1px 0 rgba(245, 229, 27, 1),
@@ -185,8 +197,12 @@
     0px 30px 0 rgba(245, 229, 27, 0);
   }
 
-
   span {
     padding-left: 1rem;
+    color: $secondary-color;
+    transition: .8s ease-out;
+  }
+  span:hover{
+    color: $main-color;
   }
 }

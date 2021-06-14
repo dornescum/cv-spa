@@ -1,10 +1,4 @@
-//.anim{
-//  opacity: 0;
-//}
 
-//.anim-left{
-//  animation: anim-left 2s ease-in;
-//}
 #html{
   animation: anim-left 2s ease-in;
 }
@@ -17,28 +11,19 @@
 #sccs{
   animation: anim-left 3.5s ease-in;
 }
-
 @keyframes anim-left {
   0%{
     opacity: 0;
     transform: translateX(-100px);
-
   }
   50%{
     opacity: 0.5;
-
   }
   100%{
     opacity: 1;
-
   }
-
 }
 
-
-//.anim-card{
-//  animation: anim-card 2s ease-in;
-//}
 #typescript{
   animation: anim-right 2s ease-in;
 }
@@ -55,21 +40,14 @@
   0%{
     opacity: 0;
     transform: translateX(100px);
-
   }
   50%{
     opacity: 0.5;
-
   }
   100%{
     opacity: 1;
-
   }
 
-}
-.fadeInLeft {
-  //-webkit-animation-name: fadeInLeft;
-  animation: fade-in-left 2s ease-in;
 }
 
 @keyframes fade-in-left {

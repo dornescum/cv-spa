@@ -7,7 +7,6 @@
     margin: 0 auto;
     position: relative;
     @media (max-width: $sm) {
-      //padding: 1rem 0 0 4rem;
     }
   }
   .about-title{
@@ -15,26 +14,22 @@
     text-transform: capitalize;
   }
   p{
-    //width: 1200px;
-    //max-width: $max-width;
     margin: 2rem auto;
     line-height: 1.9rem;
   }
  .text{
    margin: auto;
   padding: 0 20rem;
+   transition: 1s ease-out;
    @media (max-width: $desktop) {
      padding:0 2rem;
    }
    @media (max-width: $tablet-bg) {
      padding:0 2rem;
    }
-
  }
   .text:hover{
-     transform: scale(1.01);
-    //filter: url('#shake');
-    transition: $transition;
+     transform: scale(1.05);
+    transition:  1s ease-out;
   }
-
 }

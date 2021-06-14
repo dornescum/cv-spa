@@ -5,30 +5,20 @@
   .past-left {
     padding: .1rem;
     margin: .1rem;
-    //display: flex;
-    //justify-content: center;
-    //align-content: center;
     @media (max-width: $tablet) {
       width: $tb-width;
       max-width: $tb-max-width;
       min-width: $tb-min-width;
     }
     @media (max-width: $sm) {
-      //width: 280px;
-      //max-width: 320px;
-      //min-width: 250px;
       text-align: justify;
       padding: .2rem;
       margin: .1rem;
       width: 280px;
       max-width: 320px;
       min-width: 250px;
-
     }
-
-
   }
-
   .past-right {
     padding: .1rem;
     margin: .1rem;
@@ -39,7 +29,6 @@
       text-align: justify;
       padding: .2rem;
       margin: .1rem;
-
     }
   }
 }

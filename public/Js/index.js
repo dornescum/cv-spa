@@ -86,8 +86,8 @@ const projects = [
         link: "http://misu.topo-online.ro/FirmeCadastruTemplate/index.html",
         title: 'Firme Cadastru',
         img: '@../../assets/img/worker.webp',
-        icon: 'fas fa-camera fa-lg'
-
+        icon: 'fas fa-camera fa-lg',
+        btnId: 'btn-1'
     },
     {
         desc: 'Html, css, bootstrap, javascript.',
@@ -95,8 +95,8 @@ const projects = [
         link: "https://dornescum.github.io/Mihai-Dornescu/",
         title: 'Github Page',
         img: '@../../assets/img/github.webp',
-        icon: 'fas fa-camera fa-lg'
-
+        icon: 'fas fa-camera fa-lg',
+        btnId: 'btn-2'
     },
     {
         desc: 'Simple react web app.',
@@ -104,7 +104,8 @@ const projects = [
         link: "https://apartament-1a2c9.web.app/",
         title: 'Apartament sale',
         img: '@../../assets/img/Living-1.webp',
-        icon: 'fas fa-camera fa-lg'
+        icon: 'fas fa-camera fa-lg',
+        btnId: 'btn-3'
     },
     {
         desc: 'Html, css, javascript ',
@@ -112,19 +113,24 @@ const projects = [
         link: "http://pi-frontend.cpco.ro/index.html",
         title: 'voluntary work',
         img: '@../../assets/img/volunteer.webp',
-        icon: 'fas fa-camera fa-lg'
+        icon: 'fas fa-camera fa-lg',
+        btnId: 'btn-4'
+
     },
 
 ]
 
 window.addEventListener('DOMContentLoaded', () => {
-    future.innerHTML = projects.map(({desc, id, link, title, img, icon}) => {
+
+    future.innerHTML = projects.map(({desc,
+                                         id, link, title, img, icon, btnId}) => {
         return `
                     <div class="card-3" id=${id}>
                         <div class="card-project">
                             <p class="title-project">${title}</p>
-                             <img src=${img} alt={title} loading="lazy">
-                            <p class="card-desc" id="open">${desc}</p>
+                             <img src=${img} alt={title} loading="lazy" id=${btnId}>
+                            <p class="card-desc" id=${id}>${desc}</p>
+                           
                             <a href=${link} class="card-link" target="_blank">
                                 <i class="fa fa-chevron-right" aria-hidden="true"></i>
                             </a>
@@ -132,6 +138,40 @@ window.addEventListener('DOMContentLoaded', () => {
                     </div>
         `
     }).join('');
+    const modal = document.querySelector('.modal');
+    const btnModal = document.querySelector('.close-modal');
+    const btn1 = document.getElementById('btn-1');
+    const btn2 = document.getElementById('btn-2');
+    const btn3 = document.getElementById('btn-3');
+    const btn4 = document.getElementById('btn-4');
+    console.log(btn1)
+    console.log(btnModal)
+    btn1.addEventListener('click', ()=>{
+        modal.classList.add('show-modal');
+        console.log('click')
+    })
+    btn2.addEventListener('click', ()=>{
+        modal.classList.add('show-modal');
+        console.log('click')
+    })
+ btn3.addEventListener('click', ()=>{
+        modal.classList.add('show-modal');
+        console.log('click')
+    })
+    btn4.addEventListener('click', () => {
+        modal.classList.add('show-modal');
+        console.log('click')
+    })
+
+    btnModal.addEventListener('click', ()=>{
+        if (btnModal.classList.contains('show-modal')){
+            modal.classList.remove('show-modal')
+        }
+        else {
+            modal.classList.remove('remove-modal')
+            modal.classList.remove('show-modal')
+        }
+    })
 })
 
 // =======cookie====
@@ -155,3 +195,4 @@ setTimeout(() => {
 }, 5000);
 
 console.timeEnd("timer")
+// <button id=${btnId}>x</button>

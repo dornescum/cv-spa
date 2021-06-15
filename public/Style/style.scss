@@ -7,6 +7,7 @@
 @import "partials/section-future";
 @import "partials/footer";
 @import "partials/cookie";
+@import "partials/modal";
 @import "modules/animate";
 @import "modules/about";
 
@@ -67,8 +68,9 @@ body {
   &:hover {
     box-shadow: $dark-shadow;
   }
+
   @media (max-width: $tablet-bg) {
-    width:470px;
+    width: 470px;
     max-width: 480px;
     min-width: 250px;
 
@@ -143,7 +145,8 @@ body {
   @media (max-width: $sm) {
     padding: 1rem 0 0 4rem;
   }
-  p{
+
+  p {
     font-size: 1.2rem;
   }
 }
@@ -160,9 +163,11 @@ body {
   background-color: $white-1;
   @include display_flex;
   height: 22rem;
+
   &:hover {
     box-shadow: $dark-shadow;
   }
+
   @media (max-width: $desktop) {
     margin: .1rem;
   }
@@ -188,6 +193,7 @@ body {
 
   .card-project {
     width: 100%;
+
     .title-project {
       @include flex-start;
       padding: .5rem 0 0 1.1rem;
@@ -197,23 +203,26 @@ body {
         padding: 1rem 0 0 3rem;
       }
     }
+
     img {
       padding: 1rem;
-      //width: 15rem;
+      cursor: zoom-in;
       height: 13rem;
       width: 100%;
       filter: grayscale(100%);
       transition: $transition;
+
       &:hover {
         filter: grayscale(0%);
       }
+
       @media (max-width: $tablet-bg) {
-      height: 13rem;
+        height: 13rem;
       }
       @media (max-width: $tablet) {
         height: 10rem;
       }
-        @media (max-width: $sm) {
+      @media (max-width: $sm) {
         height: 13rem;
       }
     }
@@ -231,8 +240,9 @@ body {
       color: $secondary-color;
       transition: $transition;
       @include flex-end;
+
       &:hover {
-      color: $yellow;
+        color: $yellow;
       }
     }
   }

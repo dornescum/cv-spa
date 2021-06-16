@@ -139,7 +139,7 @@ window.addEventListener('DOMContentLoaded', () => {
         `
     }).join('');
     const modal = document.querySelector('.modal');
-    const btnModal = document.querySelector('.close-modal');
+    const btnModal = document.querySelector('.close-modal-btn');
     const btn1 = document.getElementById('btn-1');
     const btn2 = document.getElementById('btn-2');
     const btn3 = document.getElementById('btn-3');

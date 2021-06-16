@@ -543,7 +543,7 @@
   }
 }
 
-.close-modal {
+.close-modal-btn {
   font-size: 2rem;
   background: transparent;
   border-color: transparent;
@@ -555,7 +555,7 @@
 }
 
 .remove-modal {
-  animation: closeModal 0.7s ease-out forwards;
+  animation: closeModal 1.7s ease-out forwards;
 }
 
 @keyframes showModal {

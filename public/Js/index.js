@@ -85,7 +85,7 @@ const projects = [
         id: 'p-1',
         link: "http://misu.topo-online.ro/FirmeCadastruTemplate/index.html",
         title: 'Firme Cadastru',
-        img: '@../../assets/img/worker.webp',
+        img: '@../../assets/img/cadastru.webp',
         icon: 'fas fa-camera fa-lg',
         btnId: 'btn-1'
     },
@@ -94,7 +94,7 @@ const projects = [
         id: 'p-2',
         link: "https://dornescum.github.io/Mihai-Dornescu/",
         title: 'Github Page',
-        img: '@../../assets/img/github.webp',
+        img: '@../../assets/img/resume.webp',
         icon: 'fas fa-camera fa-lg',
         btnId: 'btn-2'
     },
@@ -112,7 +112,7 @@ const projects = [
         id: 'p-4',
         link: "http://pi-frontend.cpco.ro/index.html",
         title: 'voluntary work',
-        img: '@../../assets/img/volunteer.webp',
+        img: '@../../assets/img/poetii.webp',
         icon: 'fas fa-camera fa-lg',
         btnId: 'btn-4'
 
@@ -122,8 +122,10 @@ const projects = [
 
 window.addEventListener('DOMContentLoaded', () => {
 
-    future.innerHTML = projects.map(({desc,
-                                         id, link, title, img, icon, btnId}) => {
+    future.innerHTML = projects.map(({
+                                         desc,
+                                         id, link, title, img, icon, btnId
+                                     }) => {
         return `
                     <div class="card-3" id=${id}>
                         <div class="card-project">
@@ -146,15 +148,14 @@ window.addEventListener('DOMContentLoaded', () => {
     const btn4 = document.getElementById('btn-4');
     console.log(btn1)
     console.log(btnModal)
-    btn1.addEventListener('click', ()=>{
+    btn1.addEventListener('click', () => {
+        modal.classList.add('show-modal');
+    })
+    btn2.addEventListener('click', () => {
         modal.classList.add('show-modal');
         console.log('click')
     })
-    btn2.addEventListener('click', ()=>{
-        modal.classList.add('show-modal');
-        console.log('click')
-    })
- btn3.addEventListener('click', ()=>{
+    btn3.addEventListener('click', () => {
         modal.classList.add('show-modal');
         console.log('click')
     })
@@ -163,15 +164,15 @@ window.addEventListener('DOMContentLoaded', () => {
         console.log('click')
     })
 
-    btnModal.addEventListener('click', ()=>{
-        if (btnModal.classList.contains('show-modal')){
+    btnModal.addEventListener('click', () => {
+        if (btnModal.classList.contains('show-modal')) {
             modal.classList.remove('show-modal')
-        }
-        else {
+        } else {
             modal.classList.remove('remove-modal')
             modal.classList.remove('show-modal')
         }
     })
+
 })
 
 // =======cookie====

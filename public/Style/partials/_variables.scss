@@ -14,6 +14,7 @@ $font-size-bg: 1.5rem;
 $font: 'Raleway';
 $sm: 600px;
 $tablet: 768px;
+$tablet-md: 992px;
 $tablet-bg: 1024px;
 $desktop: 1366px;
 $lg-desktop: 1920px;
@@ -35,13 +36,14 @@ $lg-min-width:700px;
 
 $line-height: 1.6;
 $line-height-2: 1.4;
+$letter-spacing: .05rem;
 $transition: all 0.2s linear;
 $spacing: 0.1rem;
 $radius: 5px;
 $transform: translate3d(0, -1px, 0);
 $light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 $dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-$max-width: 1170px;
+$max-width: 1200px;
 $fixed-width: 620px;
 
 //Breakpoints based on device

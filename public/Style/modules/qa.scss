@@ -1,0 +1,41 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+#qa {
+  width: $max-width;
+  margin: 0 auto;
+  @media (max-width: $desktop) {
+    width: $lg-max-width;
+  }
+  @media (max-width: $tablet-bg) {
+    width: 900px;
+  }
+  @media (max-width: $tablet-md) {
+    width: $md-max-width;
+  }
+  @media (max-width: $sm) {
+    width: $sm-max-width;
+  }
+
+  h4 {
+    padding: 1rem 0 1rem .5rem;
+
+  }
+
+  .extra {
+    .question {
+      @include flex-start;
+      padding: 1rem 0 1rem .5rem;
+      text-transform: capitalize;
+      font-size: 1.4rem;
+    }
+
+    .answer {
+      padding: 1rem 0 1rem .5rem;
+      letter-spacing: $letter-spacing;
+      line-height: $line-height-2;
+    }
+  }
+
+
+}

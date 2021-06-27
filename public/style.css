@@ -691,6 +691,46 @@
   transition: 1s ease-out;
 }
 
+#qa {
+  width: 1200px;
+  margin: 0 auto;
+}
+@media (max-width: 1366px) {
+  #qa {
+    width: 1050px;
+  }
+}
+@media (max-width: 1024px) {
+  #qa {
+    width: 900px;
+  }
+}
+@media (max-width: 992px) {
+  #qa {
+    width: 650px;
+  }
+}
+@media (max-width: 600px) {
+  #qa {
+    width: 320px;
+  }
+}
+#qa h4 {
+  padding: 1rem 0 1rem 0.5rem;
+}
+#qa .extra .question {
+  display: flex;
+  justify-content: flex-start;
+  padding: 1rem 0 1rem 0.5rem;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+}
+#qa .extra .answer {
+  padding: 1rem 0 1rem 0.5rem;
+  letter-spacing: 0.05rem;
+  line-height: 1.4;
+}
+
 * {
   margin: 0;
   padding: 0;

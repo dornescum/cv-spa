@@ -3,7 +3,7 @@
 
 #qa {
   width: $max-width;
-  margin: 0 auto;
+  margin: 0 auto 2rem auto;
   @media (max-width: $desktop) {
     width: $lg-max-width;
   }
@@ -22,7 +22,6 @@
     padding: 1rem 0 1rem .5rem;
 
   }
-
   .extra {
     .question {
       @include flex-start;
@@ -30,13 +29,10 @@
       text-transform: capitalize;
       font-size: 1.4rem;
     }
-
     .answer {
       padding: 1rem 0 1rem .5rem;
       letter-spacing: $letter-spacing;
       line-height: $line-height-2;
     }
   }
-
-
 }

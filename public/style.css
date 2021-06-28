@@ -747,7 +747,7 @@
 .timeline::after {
   content: "";
   position: absolute;
-  width: 2px;
+  width: 1px;
   background: #222;
   top: 0;
   bottom: 0;
@@ -769,18 +769,8 @@
   top: calc(50% - 8px);
   right: -8px;
   background: #ffffff;
-  border: 2px solid #222;
+  border: 1px solid #222;
   border-radius: 16px;
-  z-index: 1;
-}
-.container::before {
-  content: "";
-  position: absolute;
-  width: 50px;
-  height: 2px;
-  top: calc(50% - 1px);
-  right: 8px;
-  background: #222;
   z-index: 1;
 }
 .container .date {
@@ -789,7 +779,6 @@
   top: calc(50% - 8px);
   text-align: center;
   font-size: 14px;
-  font-weight: bold;
   color: #222;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -803,7 +792,7 @@
   padding: 9px 0;
   top: calc(50% - 20px);
   background: #fafafa;
-  border: 2px solid #222;
+  border: 1px solid #222;
   border-radius: 40px;
   text-align: center;
   font-size: 18px;

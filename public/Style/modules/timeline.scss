@@ -15,7 +15,7 @@
   &::after {
     content: '';
     position: absolute;
-    width: 2px;
+    width: 1px;
     background: $secondary-color;
     top: 0;
     bottom: 0;
@@ -36,27 +36,27 @@
     top: calc(50% - 8px);
     right: -8px;
     background: #ffffff;
-    border: 2px solid $secondary-color;
+    border: 1px solid $secondary-color;
     border-radius: 16px;
     z-index: 1;
   }
-  &::before {
-    content: '';
-    position: absolute;
-    width: 50px;
-    height: 2px;
-    top: calc(50% - 1px);
-    right: 8px;
-    background: $secondary-color;
-    z-index: 1;
-  }
+  //&::before {
+  //  content: '';
+  //  position: absolute;
+  //  width: 50px;
+  //  height: 1px;
+  //  top: calc(50% - 1px);
+  //  right: 8px;
+  //  background: $secondary-color;
+  //  z-index: 1;
+  //}
   .date {
     position: absolute;
     display: inline-block;
     top: calc(50% - 8px);
     text-align: center;
     font-size: 14px;
-    font-weight: bold;
+    //font-weight: bold;
     color: $secondary-color;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -70,7 +70,7 @@
     padding: 9px 0;
     top: calc(50% - 20px);
     background: $white-1;
-    border: 2px solid $secondary-color;
+    border: 1px solid $secondary-color;
     border-radius: 40px;
     text-align: center;
     font-size: 18px;

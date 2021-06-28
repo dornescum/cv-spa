@@ -90,7 +90,7 @@ const projects = [
         btnId: 'btn-1'
     },
     {
-        desc: 'Html, css, bootstrap, javascript.',
+        desc: 'Boostrap',
         id: 'p-2',
         link: "https://dornescum.github.io/Mihai-Dornescu/",
         title: 'Github Page',

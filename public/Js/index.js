@@ -115,10 +115,21 @@ const projects = [
         img: '@../../assets/img/poetii.webp',
         icon: 'fas fa-camera fa-lg',
         btnId: 'btn-4'
-
+    },
+    {
+        desc: 'Next.js Sale ',
+        id: 'p-5',
+        link: "https://sale-next.vercel.app/",
+        title: 'New Sale',
+        img: '@../../assets/img/L3.webp',
+        icon: 'fas fa-camera fa-lg',
+        btnId: 'btn-5'
     },
 
-]
+
+];
+
+
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -146,22 +157,32 @@ window.addEventListener('DOMContentLoaded', () => {
     const btn2 = document.getElementById('btn-2');
     const btn3 = document.getElementById('btn-3');
     const btn4 = document.getElementById('btn-4');
-    console.log(btn1)
-    console.log(btnModal)
+    const btn5 = document.getElementById('btn-5');
+    let messageModal = document.getElementById('message-modal');
+    // console.log(btn1)
+    // console.log(btnModal)
     btn1.addEventListener('click', () => {
         modal.classList.add('show-modal');
+        messageModal.innerHTML = 'This website was built with classic HTML,Bootstrap, SCCS, and Javascript.'
+
     })
     btn2.addEventListener('click', () => {
         modal.classList.add('show-modal');
-        console.log('click')
+        messageModal.innerHTML = 'This website was built with classic HTML, SCCS, and Javascript. '
     })
     btn3.addEventListener('click', () => {
         modal.classList.add('show-modal');
-        console.log('click')
+        messageModal.innerHTML = 'This website was built with <b>React</b>  , modules.css.'
+
+
     })
     btn4.addEventListener('click', () => {
         modal.classList.add('show-modal');
-        console.log('click')
+        messageModal.innerHTML = '  I volunteer for this open-source project, I was in charged to continue the work on Html, CSS, and Javascript. I introduced new Css concepts like modules and variables. I also worked on the <b>Next</b>  js for a version of the project.'
+    })
+    btn5.addEventListener('click', () => {
+        modal.classList.add('show-modal');
+        messageModal.innerHTML = 'This website was built with <b>Next js</b>, &nbsp; <b>Scss</b> .'
     })
 
     btnModal.addEventListener('click', () => {

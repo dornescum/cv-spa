@@ -165,7 +165,6 @@ body {
   background-color: $white-1;
   @include display_flex;
   height: 22rem;
-
   &:hover {
     box-shadow: $dark-shadow;
   }
@@ -178,11 +177,20 @@ body {
     max-width: $tb-bg-max-width;
     min-width: $tb-bg-min-width;
   }
-  @media (max-width: $tablet) {
-    width: 210px;
-    max-width: 250px;
+   @media (max-width: $tablet-md) {
+    width: 300px;
+    max-width: 700px;
     min-width: 200px;
-    height: 21rem;
+  }
+
+
+  @media (max-width: $tablet) {
+    //width: 210px;
+    width: 195px;
+    max-width: 250px;
+    //min-width: 200px;
+    min-width: 180px;
+    height: 19rem;
   }
   @media (max-width: $sm) {
     //padding: .5rem;
@@ -243,10 +251,48 @@ body {
       transition: $transition;
       @include flex-end;
 
+
       &:hover {
         color: $yellow;
       }
     }
   }
 }
+
+
+  .row-flex {
+    width: $max-width;
+    max-width: $max-width;
+    min-width: $fixed-width;
+    margin: 1rem auto;
+    //padding: .1rem;
+    display: flex;
+    flex-wrap: wrap;
+    @media (max-width: $desktop) {
+      width: $lg-width;
+      min-width: $lg-min-width;
+    }
+    @media (max-width: $tablet-bg) {
+    margin-left: 3rem;
+    }
+     @media (max-width: $tablet-md) {
+      width: 620px;
+      min-width: $sm-min-width;
+       margin-left: auto;
+
+     }
+
+     @media (max-width: $tablet) {
+      width: $md-width;
+       max-width: $md-max-width;
+      min-width: $sm-min-width;
+    }
+
+     @media (max-width: $sm) {
+       margin: 1rem auto;
+      width: $sm-min-width;
+    }
+
+  }
+
 

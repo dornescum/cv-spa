@@ -129,6 +129,11 @@ const projects = [
 
 ];
 
+class Message {
+    constructor(info) {
+        this.info = info;
+    }
+}
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -159,30 +164,37 @@ window.addEventListener('DOMContentLoaded', () => {
     const btn4 = document.getElementById('btn-4');
     const btn5 = document.getElementById('btn-5');
     let messageModal = document.getElementById('message-modal');
-    // console.log(btn1)
-    // console.log(btnModal)
+
+
+
     btn1.addEventListener('click', () => {
         modal.classList.add('show-modal');
-        messageModal.innerHTML = 'This website was built with classic HTML,Bootstrap, SCCS, and Javascript.'
-
+        // messageModal.innerHTML = 'This website was built with classic HTML,Bootstrap, SCCS, and Javascript.'
+        const mess = new Message('This website was built with classic HTML,Bootstrap, SCCS, and Javascript.');
+        messageModal.innerHTML = mess.info;
     })
     btn2.addEventListener('click', () => {
         modal.classList.add('show-modal');
-        messageModal.innerHTML = 'This website was built with classic HTML, SCCS, and Javascript. '
+        const mess = new Message('This website was built with classic HTML,, SCCS, and Javascript.');
+
+        messageModal.innerHTML = mess.info;
     })
     btn3.addEventListener('click', () => {
         modal.classList.add('show-modal');
-        messageModal.innerHTML = 'This website was built with <b>React</b>  , modules.css.'
+        const mess = new Message('This website was built with <b>React</b>  , modules.css.');
+        messageModal.innerHTML = mess.info;
 
 
     })
     btn4.addEventListener('click', () => {
         modal.classList.add('show-modal');
-        messageModal.innerHTML = '  I volunteer for this open-source project, I was in charged to continue the work on Html, CSS, and Javascript. I introduced new Css concepts like modules and variables. I also worked on the <b>Next</b>  js for a version of the project.'
+        const mess = new Message('  I volunteer for this open-source project, I was in charged to continue the work on Html, CSS, and Javascript. I introduced new Css concepts like modules and variables. I also worked on the <b>Next</b>  js for a version of the project.');
+        messageModal.innerHTML = mess.info;
     })
     btn5.addEventListener('click', () => {
         modal.classList.add('show-modal');
-        messageModal.innerHTML = 'This website was built with <b>Next js</b>, &nbsp; <b>Scss</b> .'
+        const mess = new Message('This website was built with <b>Next js</b>, &nbsp; <b>Scss</b> .')
+        messageModal.innerHTML =  mess.info;
     })
 
     btnModal.addEventListener('click', () => {

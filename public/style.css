@@ -152,6 +152,10 @@
   font-weight: 400;
 }
 
+.icon-link {
+  padding: 1rem 0;
+}
+
 @media screen and (min-width: 800px) {
   .sidebar-overlay {
     display: none;

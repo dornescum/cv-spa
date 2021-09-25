@@ -80,6 +80,12 @@
   color: $secondary-color;
   font-weight: 400;
 }
+.icon-link {
+  padding: 1rem 0;
+  //.icon-sidebar {
+  //  padding: 0 1rem 0 0;
+  //}
+}
 
 @media screen and (min-width: 800px) {
   .sidebar-overlay {

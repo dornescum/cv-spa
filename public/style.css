@@ -312,6 +312,16 @@
   transition: 0.8s ease-out;
   text-shadow: 1px -1px 0 #f5e51b, -1px 1px 0 #f5e51b, -1px 1px 0 #f5e51b, 1px -1px 0 #f5e51b, 0px 1px 0 rgba(245, 229, 27, 0.95), 0px 2px 0 rgba(245, 229, 27, 0.9), 0px 3px 0 rgba(245, 229, 27, 0.85), 0px 4px 0 rgba(245, 229, 27, 0.8), 0px 5px 0 rgba(245, 229, 27, 0.75), 0px 6px 0 rgba(245, 229, 27, 0.7), 0px 7px 0 rgba(245, 229, 27, 0.65), 0px 8px 0 rgba(245, 229, 27, 0.6), 0px 9px 0 rgba(245, 229, 27, 0.62), 0px 10px 0 rgba(245, 229, 27, 0.6), 0px 11px 0 rgba(245, 229, 27, 0.58), 0px 12px 0 rgba(245, 229, 27, 0.55), 0px 13px 0 rgba(245, 229, 27, 0.52), 0px 14px 0 rgba(245, 229, 27, 0.5), 0px 15px 0 rgba(245, 229, 27, 0.47), 0px 16px 0 rgba(245, 229, 27, 0.45), 0px 17px 0 rgba(245, 229, 27, 0.42), 0px 18px 0 rgba(245, 229, 27, 0.4), 0px 19px 0 rgba(245, 229, 27, 0.35), 0px 20px 0 rgba(245, 229, 27, 0.3), 0px 21px 0 rgba(245, 229, 27, 0.28), 0px 22px 0 rgba(245, 229, 27, 0.25), 0px 23px 0 rgba(245, 229, 27, 0.23), 0px 24px 0 rgba(245, 229, 27, 0.21), 0px 25px 0 rgba(245, 229, 27, 0.18), 0px 26px 0 rgba(245, 229, 27, 0.15), 0px 27px 0 rgba(245, 229, 27, 0.12), 0px 28px 0 rgba(245, 229, 27, 0.09), 0px 29px 0 rgba(245, 229, 27, 0.05), 0px 30px 0 rgba(245, 229, 27, 0);
 }
+.row #married {
+  padding: 0.5rem;
+  transition: all 0.2s linear;
+  color: #222;
+}
+.row #married:hover {
+  color: #ffffff;
+  transition: 0.8s ease-out;
+  text-shadow: 1px -1px 0 #f03434, -1px 1px 0 #f03434, -1px 1px 0 #f03434, 1px -1px 0 #f03434, 0px 1px 0 rgba(240, 52, 52, 0.9), 0px 2px 0 rgba(240, 52, 52, 0.87), 0px 3px 0 rgba(240, 52, 52, 0.85), 0px 4px 0 rgba(240, 52, 52, 0.8), 0px 5px 0 rgba(240, 52, 52, 0.78), 0px 6px 0 rgba(240, 52, 52, 0.75), 0px 7px 0 rgba(240, 52, 52, 0.72), 0px 8px 0 rgba(240, 52, 52, 0.5), 0px 9px 0 rgba(240, 52, 52, 0.45), 0px 10px 0 rgba(240, 52, 52, 0.44), 0px 11px 0 rgba(240, 52, 52, 0.42), 0px 12px 0 rgba(240, 52, 52, 0.4), 0px 13px 0 rgba(240, 52, 52, 0.38), 0px 14px 0 rgba(240, 52, 52, 0.37), 0px 15px 0 rgba(240, 52, 52, 0.35), 0px 16px 0 rgba(240, 52, 52, 0.33), 0px 17px 0 rgba(240, 52, 52, 0.31), 0px 18px 0 rgba(240, 52, 52, 0.29), 0px 19px 0 rgba(240, 52, 52, 0.27), 0px 20px 0 rgba(240, 52, 52, 0.25), 0px 21px 0 rgba(240, 52, 52, 0.22), 0px 22px 0 rgba(240, 52, 52, 0.2), 0px 23px 0 rgba(240, 52, 52, 0.15), 0px 24px 0 #f03434, 0px 25px 0 rgba(240, 52, 52, 0.09), 0px 26px 0 rgba(240, 52, 52, 0.08), 0px 27px 0 rgba(240, 52, 52, 0.07), 0px 28px 0 rgba(240, 52, 52, 0.06), 0px 29px 0 rgba(240, 52, 52, 0.05), 0px 30px 0 rgba(240, 52, 52, 0.04);
+}
 .row .info-a {
   padding: 0.5rem 0;
   text-decoration: none;
@@ -416,6 +426,10 @@
   animation: anim-left 3.5s ease-in;
 }
 
+#js {
+  animation: anim-left 4s ease-in;
+}
+
 @keyframes anim-left {
   0% {
     opacity: 0;
@@ -428,7 +442,7 @@
     opacity: 1;
   }
 }
-#typescript {
+#tailwind {
   animation: anim-right 2s ease-in;
 }
 
@@ -442,6 +456,10 @@
 
 #vue {
   animation: anim-right 3.5s ease-in;
+}
+
+#jest {
+  animation: anim-right 4s ease-in;
 }
 
 @keyframes anim-right {
@@ -517,6 +535,7 @@
 
 .modal {
   opacity: 0;
+  display: none;
 }
 
 .show-modal {
@@ -529,17 +548,27 @@
   padding: 100px;
   text-align: center;
   box-sizing: border-box;
-  top: 30%;
+  top: 10%;
   left: 25%;
   width: 50%;
   transition: all 0.3s ease-out;
+  display: block;
 }
 @media (max-width: 600px) {
   .show-modal {
     padding: 4rem;
     top: 10%;
     left: 0;
-    height: 50%;
+    height: 60%;
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .show-modal {
+    padding: 4rem 1rem;
+    top: 10%;
+    left: 0;
+    height: 80%;
     width: 100%;
   }
 }
@@ -603,6 +632,10 @@
   animation: anim-left 3.5s ease-in;
 }
 
+#js {
+  animation: anim-left 4s ease-in;
+}
+
 @keyframes anim-left {
   0% {
     opacity: 0;
@@ -615,7 +648,7 @@
     opacity: 1;
   }
 }
-#typescript {
+#tailwind {
   animation: anim-right 2s ease-in;
 }
 
@@ -629,6 +662,10 @@
 
 #vue {
   animation: anim-right 3.5s ease-in;
+}
+
+#jest {
+  animation: anim-right 4s ease-in;
 }
 
 @keyframes anim-right {
@@ -803,6 +840,17 @@
   font-size: 16px;
   line-height: 22px;
   color: #222;
+}
+.container .content ul li {
+  font-size: 1.1rem;
+  padding: 0.1rem 0;
+}
+.container .content ul li a {
+  text-decoration: none;
+  color: #222;
+}
+.container .content ul li span {
+  font-weight: lighter;
 }
 
 .container.left {
@@ -1139,6 +1187,10 @@ body {
 }
 .card-3 .card-project .card-link:hover {
   color: #ffd73a;
+}
+.card-3 .card-project .card-link p {
+  font-size: 1rem;
+  padding: 0 0.5rem 0 0;
 }
 
 .row-flex {

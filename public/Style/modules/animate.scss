@@ -11,6 +11,9 @@
 #sccs{
   animation: anim-left 3.5s ease-in;
 }
+#js {
+  animation: anim-left 4s ease-in;
+}
 @keyframes anim-left {
   0%{
     opacity: 0;
@@ -24,7 +27,7 @@
   }
 }
 
-#typescript{
+#tailwind{
   animation: anim-right 2s ease-in;
 }
 #react{
@@ -35,6 +38,9 @@
 }
 #vue{
   animation: anim-right 3.5s ease-in;
+}
+#jest{
+  animation: anim-right 4s ease-in;
 }
 @keyframes anim-right {
   0%{

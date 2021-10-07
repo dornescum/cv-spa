@@ -3,6 +3,7 @@
 
 .modal{
   opacity: 0;
+  display: none;
 }
 .show-modal{
   animation: showModal 1s ease-out forwards;
@@ -14,15 +15,23 @@
   padding: 100px;
   text-align: center;
   box-sizing: border-box;
-  top: 30%;
+  top: 10%;
   left: 25%;
   width: 50%;
   transition: all 0.3s ease-out;
+  display: block;
   @media (max-width: $sm) {
     padding: 4rem;
     top: 10%;
     left: 0;
-    height: 50%;
+    height: 60%;
+    width: 100%;
+  }
+  @media (max-width: $xs) {
+    padding: 4rem 1rem;
+    top: 10%;
+    left: 0;
+    height: 80%;
     width: 100%;
   }
 }

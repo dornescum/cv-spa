@@ -71,7 +71,7 @@ contact.innerHTML = `
         <a href="tel:0762369717">
         <i class="fas fa-phone"></i>
         </a>
-        <a href="mailto:webmaster@example.com">
+        <a href="mailto:dornescu@gmail.com">
         <i class="far fa-envelope-open"></i>
         </a>`;
 
@@ -84,16 +84,16 @@ const projects = [
 		desc: 'A basic html, css, javascript.',
 		id: 'p-1',
 		link: "http://misu.topo-online.ro/FirmeCadastruTemplate/index.html",
-		title: 'Firme Cadastru',
+		title: 'Firme-Cadastru.ro template',
 		img: '@../../assets/img/cadastru.webp',
 		icon: 'fas fa-camera fa-lg',
 		btnId: 'btn-1'
 	},
 	{
-		desc: 'Boostrap',
+		desc: 'Testing everything',
 		id: 'p-2',
 		link: "https://dornescum.github.io/Mihai-Dornescu/",
-		title: 'Github Page',
+		title: 'Playground',
 		img: '@../../assets/img/resume.webp',
 		icon: 'fas fa-camera fa-lg',
 		btnId: 'btn-2'
@@ -111,7 +111,7 @@ const projects = [
 		desc: 'Html, css, javascript ',
 		id: 'p-4',
 		link: "http://pi-frontend.cpco.ro/index.html",
-		title: 'voluntary work',
+		title: 'Poetii-inchisorilor',
 		img: '@../../assets/img/poetii.webp',
 		icon: 'fas fa-camera fa-lg',
 		btnId: 'btn-4'
@@ -126,13 +126,22 @@ const projects = [
 		btnId: 'btn-5'
 	},
 	{
-		desc: 'Want a buy a car? ',
+		desc: 'Want to a buy a car? ',
 		id: 'p-6',
-		link: "https://car-next.vercel.app/",
-		title: 'Opel..',
+		link: "http://opelutul.ro/",
+		title: 'Opelutul.ro',
 		img: '@../../assets/img/car.webp',
 		icon: 'fas fa-camera fa-lg',
 		btnId: 'btn-6'
+	},
+	{
+		desc: 'Admin panel ',
+		id: 'p-7',
+		link: "https://github.com/dornescum/cadastru-final",
+		title: 'Firme cadastru admin',
+		img: '@../../assets/img/cadastru-admin.webp',
+		icon: 'fas fa-camera fa-lg',
+		btnId: 'btn-7'
 	},
 
 
@@ -159,6 +168,7 @@ window.addEventListener('DOMContentLoaded', () => {
                             <p class="card-desc" id=${id}>${desc}</p>
                            
                             <a href=${link} class="card-link" target="_blank">
+                           		<p>go</p>
                                 <i class="fa fa-chevron-right" aria-hidden="true"></i>
                             </a>
                         </div>
@@ -173,6 +183,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	const btn4 = document.getElementById('btn-4');
 	const btn5 = document.getElementById('btn-5');
 	const btn6 = document.getElementById('btn-6');
+	const btn7 = document.getElementById('btn-7');
 	let messageModal = document.getElementById('message-modal');
 
 
@@ -184,7 +195,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	});
 	btn2.addEventListener('click', () => {
 		modal.classList.add('show-modal');
-		const mess = new Message('This website was built with classic HTML,, SCCS, and Javascript.');
+		const mess = new Message('My personal playground. I tested everything in here from sccs, js, vue js (olso this was my first website)');
 
 		messageModal.innerHTML = mess.info;
 	});
@@ -197,7 +208,10 @@ window.addEventListener('DOMContentLoaded', () => {
 	});
 	btn4.addEventListener('click', () => {
 		modal.classList.add('show-modal');
-		const mess = new Message('  I volunteer for this open-source project, I was in charged to continue the work on Html, CSS, and Javascript. I introduced new Css concepts like modules and variables. I am also working on the <b>Next</b>  js for a version of the project.');
+		const mess = new Message('  I volunteer for this open-source project, I was in charged to continue the work on Html, CSS, and Javascript. I introduced new Css concepts like modules and variables. I am also working on the <b>Next</b>  js for a version of the project.' +
+			'<br> Here is a bitbucket repository :' +
+			' <a href="https://bitbucket.org/fericiticeiprigoniti/poetiiinchisorilor/src/master/"  target="_blank" style="color: #222222"><br>  <br><i> Poetii inchisorilor</i></a>	' +
+			'<br> <br> also the link to the website, for credentials contact me please  <br> <br> <a href="http://pi-frontend.cpco.ro/" target="_blank" style="color: #222222">Poetii inchisorilor</a>  ');
 		messageModal.innerHTML = mess.info;
 	});
 	btn5.addEventListener('click', () => {
@@ -207,7 +221,14 @@ window.addEventListener('DOMContentLoaded', () => {
 	});
 	btn6.addEventListener('click', () => {
 		modal.classList.add('show-modal');
-		const mess = new Message('This website was built with <b>Next js</b>, &nbsp; <b>Scss</b>,&nbsp; Simple-react-lightbox, &nbsp; React Icons.');
+		const mess = new Message('This website was built with <b>React js</b>, &nbsp; <b>Styled Components</b>,&nbsp; Simple-react-lightbox, &nbsp; React Icons.');
+		messageModal.innerHTML = mess.info;
+	});
+	btn7.addEventListener('click', () => {
+		modal.classList.add('show-modal');
+		const mess = new Message('This version is with vanilla js, sccs. And olso a react js version here <br>' +
+			'<a href="https://github.com/dornescum/AdminReactFC" target="_blank" style="color: #222222"> ' +
+			'<br> <br> <b> Admin panel React js</b> </a> ');
 		messageModal.innerHTML = mess.info;
 	});
 

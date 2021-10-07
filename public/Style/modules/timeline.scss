@@ -94,6 +94,19 @@
       line-height: 22px;
       color: $secondary-color;
     }
+    ul {
+      li {
+        font-size: $font-size;
+        padding: .1rem 0;
+        a {
+          text-decoration: none;
+          color: $secondary-color;
+        }
+        span {
+          font-weight: lighter;
+        }
+      }
+    }
   }
 }
 .container.left {

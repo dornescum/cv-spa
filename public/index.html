@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
-    <meta name="description" content="Junior Front end developer, Javascript, Html5, Css3, Sccs, React js, Vue js" />
-    <meta name="keywords" content="Vanilla Javascript "/>
-    <meta name="author" content="Mihai Dornescu"/>
-    <meta name="format-detection" content="telephone=no">
+    <meta content="Junior Front end developer, Javascript, Html5, Css3, Sccs, React js,Next js, Vue js" name="description"/>
+    <meta content="Vanilla Javascript " name="keywords"/>
+    <meta content="Mihai Dornescu" name="author"/>
+    <meta content="telephone=no" name="format-detection">
     <link href="style.css" rel="stylesheet">
     <!--    font awesome-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
@@ -65,12 +65,12 @@
                     <a class="sidebar-link" href="https://www.linkedin.com/in/mihai-dornescu-21b35a94/" target="_blank">LinkedIn</a>
                 </li>
                 <li class="sidebar-li icon-link">
-                    <a  href="tel:0762369717" class="sidebar-link">
-                       Call Me </a> <i class="fas fa-phone"></i>
+                    <a class="sidebar-link" href="tel:0762369717">
+                        Call Me </a> <i class="fas fa-phone"></i>
                 </li>
                 <li class="sidebar-li icon-link">
-                    <a  href="mailto:dornescu@gmail.com" class="sidebar-link">
-<!--                        <i class="fas fa-envelope"></i>-->
+                    <a class="sidebar-link" href="mailto:dornescu@gmail.com">
+                        <!--                        <i class="fas fa-envelope"></i>-->
                         Email
                         Me
                     </a>
@@ -78,19 +78,19 @@
 
             </ul>
 
-<!--                        <ul class="bottom-sidebar">-->
-<!--                            <li class="bottom-link">-->
-<!--                                <a  href="tel:0762369717">-->
-<!--                                    <i class="fas fa-phone"></i>Call Me </a>-->
-<!--                            </li>-->
-<!--                            <li class="bottom-link">-->
-<!--                                <a  href="mailto:dornescu@gmail.com"><i class="fas fa-envelope">-->
-<!--                                  </i>-->
-<!--                                    Email-->
-<!--                                    Me-->
-<!--                                </a>-->
-<!--                            </li>-->
-<!--                        </ul>-->
+            <!--                        <ul class="bottom-sidebar">-->
+            <!--                            <li class="bottom-link">-->
+            <!--                                <a  href="tel:0762369717">-->
+            <!--                                    <i class="fas fa-phone"></i>Call Me </a>-->
+            <!--                            </li>-->
+            <!--                            <li class="bottom-link">-->
+            <!--                                <a  href="mailto:dornescu@gmail.com"><i class="fas fa-envelope">-->
+            <!--                                  </i>-->
+            <!--                                    Email-->
+            <!--                                    Me-->
+            <!--                                </a>-->
+            <!--                            </li>-->
+            <!--                        </ul>-->
 
         </aside>
     </div>
@@ -99,10 +99,7 @@
         <p>Loading ...</p>
     </section>
 
-    <div class="modal">
-        <p id="message-modal"></p>
-        <button class="close-modal-btn"><i class="fas fa-times fa-xs"></i></button>
-    </div>
+
 
     <div class="wrapper" id="wrapper">
         <section id="present">
@@ -112,9 +109,14 @@
                 </div>
                 <div class="right-1">
                     <ul class="info">
-                        <li class="info-link"><i class="fas fa-phone"></i> <span>+40 762369717</span></li>
-                        <li class="info-link"><i class="far fa-envelope"></i> <span> Dornescu@gmail.com</span></li>
-                        <li class="info-link"><i class="fas fa-minus-circle"></i> <span> Married</span></li>
+                        <li class="info-link">
+                            <a class="info-a" href="tel:0762369717">
+                                <i class="fas fa-phone"></i> <span>+40 762369717</span></a></li>
+                        <li class="info-link">
+                            <a class="info-a" href="mailto:dornescu@gmail.com">
+                                <i class="far fa-envelope"></i> <span> Dornescu@gmail.com</span></a></li>
+                        <li class="info-link" id="married"><i class="fas fa-minus-circle"></i> <span> Married</span>
+                        </li>
                         <li class="info-link"><i class="far fa-address-card"></i> <span> Bucharest</span></li>
                         <li class="" id="git"><a class="info-a" href="https://github.com/dornescum.html"
                                                  target="_blank"><i class="fab fa-github"></i> <span> Github</span></a>
@@ -131,19 +133,18 @@
             <div class="about">
 
 
-                    <div class="row">
-                        <p class="text">
-                            Junior front-end developer, passionate about CSS and SCSS. Practicing Javascript and
-                            learning React Js. With a definite goal in mind: to learn new things. Curious about
-                            Javascript animations and Html Canvas.
-                            Team player, hard worker, and on time!
-                        <p>
-                    </div>
+                <div class="row">
+                    <p class="text">
+                        Junior front-end developer, passionate about CSS and SCSS. Practicing Javascript and
+                        learning React Js. With a definite goal in mind: to learn new things. Curious about
+                        Javascript animations and Html Canvas.
+                        Team player, hard worker, and on time!
+                    <p>
+                </div>
 
 
             </div>
         </section>
-
 
 
         <!--        past-->
@@ -165,6 +166,8 @@
                             <li class="card-list" id="css">css</li>
                             <li class="card-list" id="bootstrap">bootstrap</li>
                             <li class="card-list" id="sccs">sccs</li>
+                            <li class="card-list anim-right" id="js">javascript</li>
+
                         </ul>
                     </div>
                 </div>
@@ -176,10 +179,11 @@
                             </button>
                         </div>
                         <ul class="card-ul">
-                            <li class="card-list anim-right" id="typescript">javascript</li>
+                            <li class="card-list anim-right" id="tailwind">Tailwind Css</li>
                             <li class="card-list anim-right" id="react">react js</li>
-                            <li class="card-list anim-right disabled" id="next">next js</li>
-                            <li class="card-list anim-right" id="vue">vue</li>
+                            <li class="card-list anim-right" id="next">next js</li>
+                            <li class="card-list anim-right" id="vue">vue js</li>
+                            <li class="card-list anim-right disabled" id="jest">jest testing</li>
                         </ul>
                     </div>
                 </div>
@@ -190,57 +194,169 @@
 
         <!--            timeline-->
         <div class="title">
-            <p style="padding: 1rem 0">Timeline</p>
+            <p style="padding: 1rem 0">My Learning History</p>
         </div>
         <div class="timeline">
             <div class="container left">
-                <div class="date">06.2020</div>
+                <div class="date">03.2020</div>
                 <div class="content">
-                    <h2>Firme-cadastru.ro</h2>
-                    <p>
-                       A basic Html, Css, Javascript, Git
-                    </p>
+                    <h2>Udemy courses</h2>
+                    <!--                    <p>Udemy courses</p>-->
+                    <ul>
+                        <li>
+                            <a href="https://www.udemy.com/share/1013eA3@gUdWp9H_AwOIuZh0jybizrqex7J4hSKAI9uDlCdNM5pDmQTFWxjs3OBSLoD0sFV2/"
+                               target="_blank">Html
+                                css - <span>Brad Traversy</span></a>
+                        </li>
+                        <li>
+                            <a href="https://www.udemy.com/share/1013hy3@G8rn75UN5MR8QipxBCOwK7tY7z4JBhktj3Q3Jtnt6sMVTk8nNzD98VdyMxcR3Fi6/"
+                               target="_blank">
+                                Css - <span> Max Schwarzmüller </span></a>
+                        </li>
+                        <li>
+                            <a href="https://www.udemy.com/share/101Xd83@4uNkIJCfAX5-dR9JEtQN-KqUX5gS8GicR3t9R4JMEo8xK1E7MBHjAJ0jI6yhEue8/"
+                               target="_blank">Bootstrap
+                                4 - <span>Brad Traversy</span></a>
+                        </li>
+
+                    </ul>
                 </div>
             </div>
             <div class="container right">
                 <div class="date">07.2020</div>
-<!--                <i class="icon fa fa-gift"></i>-->
+                <!--                <i class="icon fa fa-gift"></i>-->
                 <div class="content">
-                    <h2>Github Page</h2>
-                    <p>
-                        Learning Javascript Es6
-                    </p>
+                    <h2>Udemy courses</h2>
+                    <!--                    <p>Learning Javascript Es6</p>-->
+                    <ul>
+                        <li>
+                            <a href="https://www.udemy.com/share/101Wqk3@oie8UyBeqkK_fYVe2bVBP7jfdYcLr9oE-3JMyprquABIFnZH3qeQAGpdLgu5oF48/"
+                               target="_blank">Modern
+                                Javascript - <span>Brad Traversy</span></a>
+                        </li>
+                        <li>
+                            <a href="https://www.udemy.com/share/1029Rk3@NwQA6EedZhvy5WdzaFSgvpNGLEbdnP-SEwIFff3zx9Ls2sifIualq87E-UQwrT2N/"
+                               target="_blank">Javascript
+                                - <span>Max Schwarzmüller</span></a>
+                        </li>
+                        <li>
+                            <a href="https://www.udemy.com/share/101XTS3@xJEEUk149JeJ7D1wiDir7z-CARQ6ylyZTspJbGhjnBNF_axS8nYkZESyNyTZdly_/"
+                               target="_blank">Modern
+                                Javascript - <span>Shaun Pelling</span></a>
+                        </li>
+                        <li>
+                            <a href="https://www.udemy.com/share/101xFE3@BtZz8x8XzUQCUONBDK7Dj10eMALU8Makk17IgfG796U-iW55tPCgHSTTQphieD6g/"
+                               target="_blank">
+                                Javascript - <span>John Smilga</span></a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.udemy.com/share/101XjU3@WuPKrfpPhWwjINsTwVTJWvIY7dRbQ_NoHfGJN6JaSaWpS86P82aNmLDbJfxWrU-O/"
+                               target="_blank">Weird
+                                parts of Js -
+                                <span>Anthony Alicea</span></a>
+                        </li>
+
+
+                    </ul>
                 </div>
             </div>
             <div class="container left">
                 <div class="date">10.2020</div>
-<!--                <i class="icon fa fa-user"></i>-->
+                <!--                <i class="icon fa fa-user"></i>-->
                 <div class="content">
-                    <h2>Poetii inchisorilor</h2>
-                    <p>
-                        Voluntary work, I followed project management directions and senior developer's tasks, Git.
-                    </p>
+                    <h2>Udemy courses</h2>
+                    <ul>
+                        <li>
+                            <a href="https://www.udemy.com/share/101WzM3@qudHs_TNfkAtS48hIKE9FU4rctZ5rn6JlpgoTT7NX19uh9XhSdD9BsqpQZQNfide/"
+                               target="_blank">
+                                Vue js - <span>Max Schwarzmüller</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.udemy.com/share/101Wby3@Ui5aRYqPutnjk0RkZy1APJVtGIBS-3lKjGYX9y5UPtXwzDhfBMMjFlGJJaRD69-H/"
+                               target="_blank">
+                                React js -
+                                <span>Max Schwarzmüller</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.udemy.com/share/101ros3@H_K_QyvlM86J6y2mNLJMnJnujPH1JxWuRYkTqabbB6KbpeKvOhIw_b0lAfyI2_8c/"
+                               target="_blank">
+                                React - by <span>John Smilga</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.udemy.com/share/101X8W3@I-bOZQZaQrCDaxF6d-9CXly1L6RzP9vCo8xwVCxDB4lwwijQ7-Ood9WgL7UyfafV/"
+                               target="_blank">
+                                OOP - <span>Mosh Hamedani</span>
+                            </a>
+                        </li>
+
+                    </ul>
                 </div>
             </div>
             <div class="container right">
                 <div class="date">04.2021</div>
-<!--                <i class="icon fa fa-running"></i>-->
+                <!--                <i class="icon fa fa-running"></i>-->
                 <div class="content">
-                    <h2>Apartament sale</h2>
-                    <p>
+                    <h2>Udemy courses</h2>
+                    <ul>
+                        <li>
+                            <a href="https://codewithmosh.com/p/ultimate-redux" target="_blank">
+                                Redux - <span>Mosh Hamedani</span>
+                            </a>
+                        </li>
 
-                        A basic <b>React app</b>, where I used React-Router, Suspense, Route lazy loading, and responsive images for all devices.
-                    </p>
+                        <li>
+                            <a href="https://www.udemy.com/share/104coM3@o3z7FHRiOuJt_HOAuMf1Wyq2RX8Z0ifp6dx5pv0z3WnV_gkFKyMC514fzsFwkq3v/"
+                               target="_blank">
+                                Next js - <span>Max Schwarzmüller</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.udemy.com/share/102fVS3@PfK7qZJIX3MSmrrcxEWqijZu81vPdz5c_ALQH8JAGkh3ZWQ2RTXt10D-vfFotK7G/"
+                               target="_blank">
+                                Mern - <span>Max Schwarzmüller</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.udemy.com/share/101xxa3@zFpxTkCrg2QmdJY08_ux6-z5sJuf1-aKxDpnI11VmvyFofQlvodebUsVLAd0Ik0o/"
+                               target="_blank">
+                                React Styled Components - <span>John Smilga</span>
+                            </a>
+                        </li>
+
+
+                    </ul>
                 </div>
             </div>
             <div class="container left">
                 <div class="date">06.2021</div>
-<!--                <i class="icon fa fa-cog"></i>-->
+                <!--                <i class="icon fa fa-cog"></i>-->
                 <div class="content">
-                    <h2>Next Sale</h2>
-                    <p>
-                        A basic <b>Next js</b> app, where I used the build-in tools like Image, Link, getStaticProps.
-                    </p>
+                    <h2>Working on it !</h2>
+                    <ul>
+                        <li>
+                            <a href="javascript:;">Git - <span>Max Schwarzmüller</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">Node js - <span>John Smilga</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">Node js - <span>Max Schwarzmüller</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">Jest - <span>Bonnie Schulkin</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">Typescript - <span>Max Schwarzmüller</span></a>
+                        </li>
+
+                    </ul>
                 </div>
             </div>
         </div>
@@ -263,19 +379,22 @@
             <div class="extra">
                 <p class="question">Why did I start programming at the age of 39?</p>
                 <p class="answer">
-                    The global pandemic, stuck in the house so I had to be productive. Being attracted to computers and a Linux fan I decided to start learning new things. So I focused all my energy on front-end development. I already had some experience with html and css.
+                    The global pandemic, stuck in the house so I had to be productive. Being attracted to computers and
+                    a Linux fan I decided to start learning new things. So I focused all my energy on front-end
+                    development. I already had some experience with html and css.
                 </p>
                 <p class="answer">And soon I realized the potential of Javascript.</p>
             </div>
             <div class="extra">
                 <p class="question">Why would you hire me?</p>
-                <p class="answer">Why not? Yes, I am older than the other candidates you've seen all day, but I have 20 years life experience in the workforce, I am focused,  determined, ready to learn new things and I've got bills to pay.   </p>
+                <p class="answer">Why not? Yes, I am older than the other candidates you've seen all day, but I have 20
+                    years life experience in the workforce, I am focused, determined, ready to learn new things and I've
+                    got bills to pay. </p>
             </div>
             <div class="extra">
                 <p class="question">Salary expectations?</p>
                 <p class="answer">At the moment, I am not focused too much on money, my goal is to learn new things.</p>
             </div>
-
 
 
         </section>
@@ -293,7 +412,14 @@
         </button>
     </div>
 
+    <div class="modal">
+        <p id="message-modal"></p>
+        <button class="close-modal-btn"><i class="fas fa-times fa-xs"></i></button>
+    </div>
+
     <p class="footer" id="footer"></p>
+
+
 
 </main>
 

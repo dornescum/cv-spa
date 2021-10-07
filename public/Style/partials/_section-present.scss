@@ -150,6 +150,55 @@
     0px 30px 0 rgba(245, 229, 27, 0);
 
   }
+  //=============
+  #married {
+    padding: .5rem;
+    transition: $transition;
+    color: $secondary-color;
+  }
+  #married:hover {
+    color: $main-color;
+    transition: .8s ease-out;
+    text-shadow: 1px -1px 0 rgba(240, 52, 52, 1),
+    -1px 1px 0 rgba(240, 52, 52, 1),
+    -1px 1px 0 rgba(240, 52, 52, 1),
+    1px -1px 0 rgba(240, 52, 52, 1),
+    0px 1px 0 rgba(240, 52, 52, 0.90),
+    0px 2px 0 rgba(240, 52, 52, 0.87),
+    0px 3px 0 rgba(240, 52, 52, 0.85),
+    0px 4px 0 rgba(240, 52, 52, 0.80),
+    0px 5px 0 rgba(240, 52, 52, 0.78),
+    0px 6px 0 rgba(240, 52, 52, 0.75),
+    0px 7px 0 rgba(240, 52, 52, 0.72),
+    0px 8px 0 rgba(240, 52, 52, 0.5),
+    0px 9px 0 rgba(240, 52, 52, 0.45),
+    0px 10px 0 rgba(240, 52, 52, 0.44),
+    0px 11px 0 rgba(240, 52, 52, 0.42),
+    0px 12px 0 rgba(240, 52, 52, 0.40),
+    0px 13px 0 rgba(240, 52, 52, 0.38),
+    0px 14px 0 rgba(240, 52, 52, 0.37),
+    0px 15px 0 rgba(240, 52, 52, 0.35),
+    0px 16px 0 rgba(240, 52, 52, 0.33),
+    0px 17px 0 rgba(240, 52, 52, 0.31),
+    0px 18px 0 rgba(240, 52, 52, 0.29),
+    0px 19px 0 rgba(240, 52, 52, 0.27),
+    0px 20px 0 rgba(240, 52, 52, 0.25),
+    0px 21px 0 rgba(240, 52, 52, 0.22),
+    0px 22px 0 rgba(240, 52, 52, 0.20),
+    0px 23px 0 rgba(240, 52, 52, 0.15),
+    0px 24px 0 rgba(240, 52, 52, 1),
+    0px 25px 0 rgba(240, 52, 52, 0.09),
+    0px 26px 0 rgba(240, 52, 52, 0.08),
+    0px 27px 0 rgba(240, 52, 52, 0.07),
+    0px 28px 0 rgba(240, 52, 52, 0.06),
+    0px 29px 0 rgba(240, 52, 52, 0.05),
+    0px 30px 0 rgba(240, 52, 52, 0.04);
+
+  }
+  //=============
+
+
+
 
   .info-a {
     padding: .5rem 0;

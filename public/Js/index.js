@@ -84,7 +84,7 @@ const projects = [
 		desc: 'A basic html, css, javascript.',
 		id: 'p-1',
 		link: "http://misu.topo-online.ro/FirmeCadastruTemplate/index.html",
-		title: 'Firme-Cadastru.ro template',
+		title: 'Firme Cadastru.ro ',
 		img: '@../../assets/img/cadastru.webp',
 		icon: 'fas fa-camera fa-lg',
 		btnId: 'btn-1'
@@ -168,7 +168,7 @@ window.addEventListener('DOMContentLoaded', () => {
                             <p class="card-desc" id=${id}>${desc}</p>
                            
                             <a href=${link} class="card-link" target="_blank">
-                           		<p>go</p>
+                           		
                                 <i class="fa fa-chevron-right" aria-hidden="true"></i>
                             </a>
                         </div>
@@ -208,7 +208,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	});
 	btn4.addEventListener('click', () => {
 		modal.classList.add('show-modal');
-		const mess = new Message('  I volunteer for this open-source project, I was in charged to continue the work on Html, CSS, and Javascript. I introduced new Css concepts like modules and variables. I am also working on the <b>Next</b>  js for a version of the project.' +
+		const mess = new Message('  I volunteer for this open-source project,  I was entrusted to continue the work on Html, CSS, and Javascript. I introduced new Css concepts like modules and variables. I am also working on the <b>Next</b>  js for a version of the project.' +
 			'<br> Here is a bitbucket repository :' +
 			' <a href="https://bitbucket.org/fericiticeiprigoniti/poetiiinchisorilor/src/master/"  target="_blank" style="color: #222222"><br>  <br><i> Poetii inchisorilor</i></a>	' +
 			'<br> <br> also the link to the website, for credentials contact me please  <br> <br> <a href="http://pi-frontend.cpco.ro/" target="_blank" style="color: #222222">Poetii inchisorilor</a>  ');
@@ -226,7 +226,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	});
 	btn7.addEventListener('click', () => {
 		modal.classList.add('show-modal');
-		const mess = new Message('This version is with vanilla js, sccs. And olso a react js version here <br>' +
+		const mess = new Message('This version is with vanilla js, sccs. And also a react js version here <br>' +
 			'<a href="https://github.com/dornescum/AdminReactFC" target="_blank" style="color: #222222"> ' +
 			'<br> <br> <b> Admin panel React js</b> </a> ');
 		messageModal.innerHTML = mess.info;

@@ -411,22 +411,26 @@
 }
 
 #html {
-  animation: anim-left 2s ease-in;
+  animation: anim-left 1.5s ease-in;
 }
 
 #css {
-  animation: anim-left 2.5s ease-in;
+  animation: anim-left 2s ease-in;
 }
 
 #bootstrap {
-  animation: anim-left 3s ease-in;
+  animation: anim-left 2.5s ease-in;
 }
 
 #sccs {
-  animation: anim-left 3.5s ease-in;
+  animation: anim-left 3s ease-in;
 }
 
 #js {
+  animation: anim-left 3.5s ease-in;
+}
+
+#tailwind {
   animation: anim-left 4s ease-in;
 }
 
@@ -442,23 +446,27 @@
     opacity: 1;
   }
 }
-#tailwind {
-  animation: anim-right 2s ease-in;
+#styled-components {
+  animation: anim-right 1.5s ease-in;
 }
 
 #react {
-  animation: anim-right 2.5s ease-in;
+  animation: anim-right 2s ease-in;
 }
 
 #next {
-  animation: anim-right 3s ease-in;
+  animation: anim-right 2.5s ease-in;
 }
 
 #vue {
-  animation: anim-right 3.5s ease-in;
+  animation: anim-right 3s ease-in;
 }
 
 #jest {
+  animation: anim-right 3.5s ease-in;
+}
+
+#cypress {
   animation: anim-right 4s ease-in;
 }
 
@@ -617,22 +625,26 @@
   }
 }
 #html {
-  animation: anim-left 2s ease-in;
+  animation: anim-left 1.5s ease-in;
 }
 
 #css {
-  animation: anim-left 2.5s ease-in;
+  animation: anim-left 2s ease-in;
 }
 
 #bootstrap {
-  animation: anim-left 3s ease-in;
+  animation: anim-left 2.5s ease-in;
 }
 
 #sccs {
-  animation: anim-left 3.5s ease-in;
+  animation: anim-left 3s ease-in;
 }
 
 #js {
+  animation: anim-left 3.5s ease-in;
+}
+
+#tailwind {
   animation: anim-left 4s ease-in;
 }
 
@@ -648,23 +660,27 @@
     opacity: 1;
   }
 }
-#tailwind {
-  animation: anim-right 2s ease-in;
+#styled-components {
+  animation: anim-right 1.5s ease-in;
 }
 
 #react {
-  animation: anim-right 2.5s ease-in;
+  animation: anim-right 2s ease-in;
 }
 
 #next {
-  animation: anim-right 3s ease-in;
+  animation: anim-right 2.5s ease-in;
 }
 
 #vue {
-  animation: anim-right 3.5s ease-in;
+  animation: anim-right 3s ease-in;
 }
 
 #jest {
+  animation: anim-right 3.5s ease-in;
+}
+
+#cypress {
   animation: anim-right 4s ease-in;
 }
 
@@ -1055,7 +1071,6 @@ body {
   display: flex;
   justify-content: flex-start;
   padding: 0.5rem 0 0 22rem;
-  text-transform: capitalize;
 }
 @media (max-width: 1366px) {
   .title {

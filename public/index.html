@@ -7,6 +7,7 @@
     <meta content="Vanilla Javascript " name="keywords"/>
     <meta content="Mihai Dornescu" name="author"/>
     <meta content="telephone=no" name="format-detection">
+    <link rel="shortcut icon" href="../public/assets/img/book.png">
     <link href="style.css" rel="stylesheet">
     <!--    font awesome-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
@@ -20,7 +21,7 @@
 </head>
 <body>
 <main class="main" id="main">
-    <nav class="navbar">
+    <nav class="navbar" data-testid="navbar">
         <div class="nav-left">
             <button class="toggle-nav">
                 <i class="fas fa-bars"></i>
@@ -30,7 +31,7 @@
         <div class="nav-right">
             <ul class="ul-links">
                 <li class="links"><a href="#main">Home</a></li>
-                <li class="links"><a href="#past">Skills</a></li>
+                <li class="links"><a href="#learning">Skills</a></li>
                 <li class="links"><a href="#future">Portfolio</a></li>
             </ul>
         </div>
@@ -50,7 +51,7 @@
                     </a>
                 </li>
                 <li class="sidebar-li" id="sidebar-past">
-                    <a class="sidebar-link" href="#past">
+                    <a class="sidebar-link" href="#learning">
                         Skills
                     </a>
                 </li>
@@ -131,8 +132,6 @@
         <!--        presentation-->
         <section id="presentation">
             <div class="about">
-
-
                 <div class="row">
                     <p class="text">
                         Junior front-end developer, passionate about CSS and SCSS. Practicing Javascript and
@@ -148,7 +147,7 @@
 
 
         <!--        past-->
-        <section class="past" id="past">
+        <section class="past" id="learning" data-testid="learning-courses">
             <div class="title">
                 <p>Skills</p>
             </div>
@@ -167,6 +166,7 @@
                             <li class="card-list" id="bootstrap">bootstrap</li>
                             <li class="card-list" id="sccs">sccs</li>
                             <li class="card-list anim-right" id="js">javascript</li>
+                            <li class="card-list anim-right" id="tailwind">Tailwind Css</li>
 
                         </ul>
                     </div>
@@ -179,11 +179,12 @@
                             </button>
                         </div>
                         <ul class="card-ul">
-                            <li class="card-list anim-right" id="tailwind">Tailwind Css</li>
+                            <li class="card-list anim-right" id="styled-components">Styled Components</li>
                             <li class="card-list anim-right" id="react">react js</li>
                             <li class="card-list anim-right" id="next">next js</li>
                             <li class="card-list anim-right" id="vue">vue js</li>
                             <li class="card-list anim-right disabled" id="jest">jest testing</li>
+                            <li class="card-list anim-right disabled" id="cypress">cypress testing</li>
                         </ul>
                     </div>
                 </div>
@@ -194,7 +195,7 @@
 
         <!--            timeline-->
         <div class="title">
-            <p style="padding: 1rem 0">My Learning History</p>
+            <p style="padding: 1rem 0">Learning path</p>
         </div>
         <div class="timeline">
             <div class="container left">
@@ -344,16 +345,20 @@
                             <a href="javascript:;">Git - <span>Max Schwarzmüller</span></a>
                         </li>
                         <li>
-                            <a href="javascript:;">Node js - <span>John Smilga</span></a>
+                            <a href="https://www.udemy.com/share/104JOe3@OSi4OC9HJ9UeUYVTQEo2lAPLBanEZpmhiITE6X5OBLjTPbsXeCFcov9-oKWH0GrD/" target="_blank">Node js - <span>John Smilga</span></a>
                         </li>
                         <li>
                             <a href="javascript:;">Node js - <span>Max Schwarzmüller</span></a>
                         </li>
                         <li>
-                            <a href="javascript:;">Jest - <span>Bonnie Schulkin</span></a>
+                            <a href="https://www.udemy.com/share/1040ZS3@SPN9APnlhbho1LSwEhUgItmfJDnEQox2hTiOeYMhd1dvL819pSOgI2VTvFwz9010/" target="_blank">Jest Testing React- <span>Bonnie Schulkin</span></a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.udemy.com/share/103quk3@bRnP32s_OhK2Pax2fQef8QsEZedyLXPw1TOppE3sKRIy0wjl7dMNa3tj0PQAlLbm/" target="_blank">Cypress UI Automation Testing - <span>Gainni Bruno</span> </a>
                         </li>
                         <li>
-                            <a href="javascript:;">Typescript - <span>Max Schwarzmüller</span></a>
+                            <a href="https://www.udemy.com/share/1013yQ3@M5xgVLDix9ziq-O8As5o0QD4glboFuDzNEChCAADiP51Ioyk8YEzaH9SSMRJnwNR/" target="_blank">Typescript - <span>Max Schwarzmüller</span></a>
                         </li>
 
                     </ul>

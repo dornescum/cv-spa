@@ -1,11 +1,10 @@
 console.time("timer");
+import {projects} from "./modules/Projects.js";
 
 const getElement = (selection) => {
 	const element = document.querySelector(selection);
 	if (element) return element;
-	throw new Error(
-		`Please check "${selection}" selector, no such element exist`
-	);
+	throw new Error(`Please check "${selection}" selector, no such element exist`);
 };
 // navbar
 const toggleNav = getElement('.toggle-nav');
@@ -79,73 +78,7 @@ footer.append(contact);
 
 // future
 const future = document.getElementById('future-start');
-const projects = [
-	{
-		desc: 'A basic html, css, javascript.',
-		id: 'p-1',
-		link: "http://misu.topo-online.ro/FirmeCadastruTemplate/index.html",
-		title: 'Firme Cadastru.ro ',
-		img: '@../../assets/img/cadastru.webp',
-		icon: 'fas fa-camera fa-lg',
-		btnId: 'btn-1'
-	},
-	{
-		desc: 'Testing everything',
-		id: 'p-2',
-		link: "https://dornescum.github.io/Mihai-Dornescu/",
-		title: 'Playground',
-		img: '@../../assets/img/resume.webp',
-		icon: 'fas fa-camera fa-lg',
-		btnId: 'btn-2'
-	},
-	{
-		desc: 'Simple react web app.',
-		id: 'p-3',
-		link: "https://apartament-1a2c9.web.app/",
-		title: 'Apartament sale',
-		img: '@../../assets/img/Living-1.webp',
-		icon: 'fas fa-camera fa-lg',
-		btnId: 'btn-3'
-	},
-	{
-		desc: 'Html, css, javascript ',
-		id: 'p-4',
-		link: "http://pi-frontend.cpco.ro/index.html",
-		title: 'Poetii-inchisorilor',
-		img: '@../../assets/img/poetii.webp',
-		icon: 'fas fa-camera fa-lg',
-		btnId: 'btn-4'
-	},
-	{
-		desc: 'Next.js Sale ',
-		id: 'p-5',
-		link: "https://sale-next.vercel.app/",
-		title: 'New Sale',
-		img: '@../../assets/img/L3.webp',
-		icon: 'fas fa-camera fa-lg',
-		btnId: 'btn-5'
-	},
-	{
-		desc: 'Want to a buy a car? ',
-		id: 'p-6',
-		link: "http://opelutul.ro/",
-		title: 'Opelutul.ro',
-		img: '@../../assets/img/car.webp',
-		icon: 'fas fa-camera fa-lg',
-		btnId: 'btn-6'
-	},
-	{
-		desc: 'Admin panel ',
-		id: 'p-7',
-		link: "https://github.com/dornescum/cadastru-final",
-		title: 'Firme cadastru admin',
-		img: '@../../assets/img/cadastru-admin.webp',
-		icon: 'fas fa-camera fa-lg',
-		btnId: 'btn-7'
-	},
 
-
-];
 
 class Message {
 	constructor(info) {
@@ -157,8 +90,7 @@ class Message {
 window.addEventListener('DOMContentLoaded', () => {
 
 	future.innerHTML = projects.map(({
-										 desc,
-										 id, link, title, img, icon, btnId
+										 desc, id, link, title, img, icon, btnId
 									 }) => {
 		return `
                     <div class="card-3" id=${id}>
@@ -195,7 +127,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	});
 	btn2.addEventListener('click', () => {
 		modal.classList.add('show-modal');
-		const mess = new Message('My personal playground. I tested everything in here from sccs, js, vue js (olso this was my first website)');
+		const mess = new Message('My personal playground. I tested everything in here from sccs, js, vue js (also this was my first website)');
 
 		messageModal.innerHTML = mess.info;
 	});
@@ -208,10 +140,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	});
 	btn4.addEventListener('click', () => {
 		modal.classList.add('show-modal');
-		const mess = new Message('  I volunteer for this open-source project,  I was entrusted to continue the work on Html, CSS, and Javascript. I introduced new Css concepts like modules and variables. I am also working on the <b>Next</b>  js for a version of the project.' +
-			'<br> Here is a bitbucket repository :' +
-			' <a href="https://bitbucket.org/fericiticeiprigoniti/poetiiinchisorilor/src/master/"  target="_blank" style="color: #222222"><br>  <br><i> Poetii inchisorilor</i></a>	' +
-			'<br> <br> also the link to the website, for credentials contact me please  <br> <br> <a href="http://pi-frontend.cpco.ro/" target="_blank" style="color: #222222">Poetii inchisorilor</a>  ');
+		const mess = new Message('  I volunteer for this open-source project,  I was entrusted to continue the work on Html, CSS, and Javascript. I introduced new Css concepts like modules and variables. I am also working on the <b>Next</b>  js for a version of the project.' + '<br> Here is a bitbucket repository :' + ' <a href="https://bitbucket.org/fericiticeiprigoniti/poetiiinchisorilor/src/master/"  target="_blank" style="color: #222222"><br>  <br><i> Poetii inchisorilor</i></a>	' + '<br> <br> also the link to the website, for credentials contact me please  <br> <br> <a href="http://pi-frontend.cpco.ro/" target="_blank" style="color: #222222">Poetii inchisorilor</a>  ');
 		messageModal.innerHTML = mess.info;
 	});
 	btn5.addEventListener('click', () => {
@@ -226,9 +155,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	});
 	btn7.addEventListener('click', () => {
 		modal.classList.add('show-modal');
-		const mess = new Message('This version is with vanilla js, sccs. And also a react js version here <br>' +
-			'<a href="https://github.com/dornescum/AdminReactFC" target="_blank" style="color: #222222"> ' +
-			'<br> <br> <b> Admin panel React js</b> </a> ');
+		const mess = new Message('This version is with vanilla js, sccs. And also a react js version here <br>' + '<a href="https://github.com/dornescum/AdminReactFC" target="_blank" style="color: #222222"> ' + '<br> <br> <b> Admin panel React js</b> </a> ');
 		messageModal.innerHTML = mess.info;
 	});
 

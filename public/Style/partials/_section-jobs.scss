@@ -1,0 +1,143 @@
+@import "variables";
+@import "mixins";
+
+#jobs {
+  margin: 0 auto;
+  padding: .2rem 2rem;
+  width: $desktop;
+
+  @media (max-width: $sm) {
+    width: 100%;
+    padding: 1.2rem 1rem;
+    line-height: 1.9;
+  }
+
+
+  .jobs-header {
+    padding: 0;
+  }
+  .work {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    flex-direction: row;
+    margin: .5rem 0;
+    padding: .5rem 0;
+    @media (max-width: $sm) {
+      flex-direction: column;
+    }
+  }
+
+}
+
+.work-header-big {
+  display: none;
+  @media (min-width: $tablet) {
+    display: block;
+  }
+
+  .work-wrapper {
+    display: flex;
+
+    .work-employer {
+      width: 30%;
+      font-size: 18px;
+      @media (max-width: $sm) {
+        width: 30%;
+        display: block;
+      }
+
+      p {
+        font-size: 14px;
+        padding: .3rem 0;
+
+        &:first-child {
+          font-weight: 600;
+        }
+
+        &:last-child {
+          font-style: italic;
+        }
+      }
+    }
+
+    .work-description {
+      width: 70%;
+      font-size: $font-size;
+
+      p {
+        padding: .2rem 0;
+      }
+
+      ul {
+        list-style-type: circle;
+      }
+
+      ul li {
+        padding: .2rem 0 .2rem .5rem;
+      }
+    }
+  }
+}
+
+.work-header-small {
+  display: block;
+  @media (min-width: $tablet) {
+    display: none;
+  }
+
+  .work-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+
+    button {
+      border-radius: 50%;
+      padding: 8px;
+      margin-left: 5px;
+      border: 1px solid #f9f9f9;
+      margin-right: 15px;
+    }
+  }
+
+  .work-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 0 1rem;
+
+    .work-employer {
+      //font-size: 18px;
+      flex-direction: column;
+
+      p {
+        font-size: 14px;
+
+        &:first-child {
+          font-weight: 600;
+        }
+
+        &:last-child {
+          font-style: italic;
+        }
+      }
+    }
+
+    .work-description {
+      padding: .5rem 0;
+      font-size: $font-size-sm;
+    }
+  }
+}
+
+
+.collapse {
+  display: none;
+  @media (min-width: $tablet) {
+    display: block;
+  }
+}
+
+.collapse.show {
+  display: block;
+}

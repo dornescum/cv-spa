@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTGY12H9MV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-ZTGY12H9MV');
+    </script>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
     <meta content="Junior Front end developer, Javascript, Html5, Css3, Sccs, React js,Next js, Vue js"
@@ -17,8 +31,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,900;1,100;1,400&display=swap"
           rel="stylesheet">
     <script defer src="Js/index.js" type="module"></script>
+    <script defer src="Js/modules/upBtn.js" type="module"></script>
+    <script defer src="Js/modules/mobileExperience.js" type="module"></script>
+<!--    <script defer src="Js/serverConnection.js" type="module"></script>-->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
     <title>Cv Mihai Dornescu</title>
+    <style>
+        .collapse {
+            display: none;
+        }
+
+
+        .smooth-display {
+            transition: display 2s;
+        }
+
+        .show {
+            display: block !important;
+            height: auto;
+        }
+
+    </style>
 </head>
 <body>
 <main class="main" id="main">
@@ -32,7 +68,7 @@
         <div class="nav-right">
             <ul class="ul-links">
                 <li class="links"><a href="#main">Home</a></li>
-                <li class="links"><a href="#learning">Skills</a></li>
+                <li class="links"><a href="#jobs">Experience</a></li>
                 <li class="links"><a href="#future">Portfolio</a></li>
             </ul>
         </div>
@@ -52,8 +88,8 @@
                     </a>
                 </li>
                 <li class="sidebar-li" id="sidebar-past">
-                    <a class="sidebar-link" href="#learning">
-                        Skills
+                    <a class="sidebar-link" href="#jobs">
+                       Jobs
                     </a>
                 </li>
                 <li class="sidebar-li" id="sidebar-future">
@@ -116,7 +152,7 @@
                         <li class="info-link">
                             <a class="info-a" href="mailto:dornescu@gmail.com">
                                 <i class="far fa-envelope"></i> <span> Dornescu@gmail.com</span></a></li>
-                        <li class="info-link" id="married"><i class="fas fa-minus-circle"></i> <span> Married</span>
+                        <!--                        <li class="info-link" id="married"><i class="fas fa-minus-circle"></i> <span> Married</span>-->
                         </li>
                         <li class="info-link"><i class="far fa-address-card"></i> <span> Bucharest</span></li>
                         <li class="" id="git"><a class="info-a" href="https://github.com/dornescum.html"
@@ -134,242 +170,335 @@
             <div class="about">
                 <div class="row">
                     <p class="text">
-                        Junior front-end developer, passionate about CSS and SCSS. Practicing Javascript and
-                        learning React Js. With a definite goal in mind: to learn new things. Curious about
-                        Javascript animations and Html Canvas.
-                        Team player, hard worker, and on time!
+                        As Developer, I create responsive, dynamic, and user-friendly web and mobile
+                        applications using HTML, CSS, JavaScript, SCSS, Ionic, Angular, and TypeScript. I have been
+                        working there for over a year, developing skills that are essential for the modern web and
+                        mobile development industry.
+                        I have also completed multiple online courses and certifications from LinkedIn to enhance my
+                        knowledge and stay updated with the latest trends and best practices. I am passionate about
+                        learning new things and solving problems with code. I collaborate with my team and contribute to
+                        the success of our projects.
+                        My goal is to become a full-stack developer and work on innovative and impactful solutions that
+                        can make a difference in the world.
                     <p>
                 </div>
-
-
             </div>
         </section>
 
-
-        <!--        past-->
-        <section class="past" data-testid="learning-courses" id="learning">
-            <div class="title">
-                <p>Skills</p>
-            </div>
-
-            <div class="row">
-                <div class="past-left" id="past-left">
-                    <div class="card">
-                        <div class="close-card">
-                            <button class="close-card-btn" id="pastLeftBtn">
-                                <i class="fas fa-times fa-xs"></i>
-                            </button>
+        <section id="jobs">
+            <p class="jobs-header">Experience</p>
+            <!--current PFA-->
+            <div class="work">
+                <div class="work-header-small">
+                    <div class="work-header-wrapper">
+                        <h5>Freelance Developer (PFA)</h5>
+                        <button data-target="#collapse1" class="collapse-btn">
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div id="collapse1" class="work-show-small collapse">
+                        <div class="work-wrapper">
+                            <div class="work-employer">
+                                <p>
+                                    May 2024
+                                </p>
+                            </div>
+                            <div class="work-description">
+                                <p>
+                                    As a Freelance Developer, I offer versatile web development and data scraping
+                                    services to clients on platforms like Upwork and Fiverr.
+                                    My expertise includes:
+                                </p>
+                                <ul>
+                                    <li>
+                                        Front-end Development: Proficient in Angular, Ionic, TypeScript, and CSS to
+                                        create dynamic and responsive web applications.
+                                    </li>
+                                    <li>
+                                        Back-end Development: Skilled in Node.js and MySQL for robust and scalable
+                                        server-side solutions.
+                                    </li>
+                                    <li>
+                                        Web Scraping: Experienced with Beautiful Soup and Puppeteer to extract data from
+                                        websites efficiently.
+                                    </li>
+                                    <li>
+                                        Data Processing: Capable of cleaning and processing data using Pandas,
+                                        delivering results in various formats such as CSV, PDF, and JSON.
+                                    </li>
+                                </ul>
+                                <p>
+                                    I am dedicated to providing high-quality, reliable solutions tailored to meet the
+                                    unique needs of each client.
+                                </p>
+                            </div>
                         </div>
-                        <ul class="card-ul">
-                            <li class="card-list" id="html">html</li>
-                            <li class="card-list" id="css">css</li>
-                            <li class="card-list" id="bootstrap">bootstrap</li>
-                            <li class="card-list" id="sccs">sccs</li>
-                            <li class="card-list anim-right" id="js">javascript</li>
-                            <li class="card-list anim-right" id="tailwind">Tailwind Css</li>
-
-                        </ul>
                     </div>
                 </div>
-                <div class="past-right" id="past-right">
-                    <div class="card " id="cardPastRight">
-                        <div class="close-card">
-                            <button class="close-card-btn" id="pastRightBtn">
-                                <i class="fas fa-times fa-xs"></i>
-                            </button>
+
+                <div class="work-header-big">
+                    <div class="work-wrapper">
+                        <div class="work-employer">
+                            <h5>Freelance Developer (PFA)</h5>
+                            <p>
+                                May 2024
+                            </p>
                         </div>
-                        <ul class="card-ul">
-                            <li class="card-list anim-right" id="styled-components">Styled Components</li>
-                            <li class="card-list anim-right" id="react">react js</li>
-                            <li class="card-list anim-right" id="next">next js</li>
-                            <li class="card-list anim-right" id="vue">vue js</li>
-                            <li class="card-list anim-right disabled" id="jest">jest testing</li>
-                            <li class="card-list anim-right disabled" id="cypress">cypress testing</li>
-                        </ul>
+                        <div class="work-description">
+                            <p>
+                                As a Freelance Developer, I offer versatile web development and data scraping
+                                services to clients on platforms like Upwork and Fiverr.
+                                My expertise includes:
+                            </p>
+                            <ul>
+                                <li>
+                                    Front-end Development: Proficient in Angular, Ionic, TypeScript, and CSS to
+                                    create dynamic and responsive web applications.
+                                </li>
+                                <li>
+                                    Back-end Development: Skilled in Node.js and MySQL for robust and scalable
+                                    server-side solutions.
+                                </li>
+                                <li>
+                                    Web Scraping: Experienced with Beautiful Soup and Puppeteer to extract data from
+                                    websites efficiently.
+                                </li>
+                                <li>
+                                    Data Processing: Capable of cleaning and processing data using Pandas, delivering
+                                    results in various formats such as CSV, PDF, and JSON.
+                                </li>
+                            </ul>
+                            <p>
+                                I am dedicated to providing high-quality, reliable solutions tailored to meet the unique
+                                needs of each client.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--2-->
+            <div class="work">
+                <div class="work-header-small">
+                    <div class="work-header-wrapper">
+                        <h5>Info World</h5>
+                        <button data-target="#collapse2" class="collapse-btn">
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div id="collapse2" class="work-show-small collapse">
+                        <div class="work-wrapper">
+                            <div class="work-employer">
+                                <p>
+                                    Junior developer
+                                </p>
+                                <p>
+                                    June 2022 - Martie 2024
+                                </p>
+                            </div>
+                            <div class="work-description">
+                                <p>
+                                    During my work at the company, I developed a range of skills that are essential for
+                                    web and mobile development. I gained hands-on experience in HTML, CSS, and
+                                    JavaScript coding, as well as using the Ionic Framework for building hybrid mobile
+                                    applications that can run on multiple platforms. </p>
+                                <p>
+                                    I also learned how to use SCSS for writing maintainable and modular styles that
+                                    follow the best practices of CSS architecture.
+                                    Moreover, I improved my code quality and readability by using TypeScript, a superset
+                                    of JavaScript that adds static typing and catches errors at compile time.
+                                </p>
+                                <p>
+                                    Furthermore, I used Angular, a popular framework for building complex web
+                                    applications with a component-based architecture and data binding. Finally, I worked
+                                    with
+                                    Node Express, a fast and minimalist web framework for Node.js, and SQLite, a
+                                    lightweight and embedded SQL database engine that can handle large datasets
+                                    efficiently
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-header-big">
+
+                    <div class="work-wrapper">
+                        <div class="work-employer">
+                            <h5>Info World</h5>
+                            <p>
+                                Junior developer
+                            </p>
+                            <p>
+                                June 2022 - Martie 2024
+                            </p>
+                        </div>
+                        <div class="work-description">
+                            <p>
+                                During my work at the company, I developed a range of skills that are essential for
+                                web and mobile development. I gained hands-on experience in HTML, CSS, and
+                                JavaScript coding, as well as using the Ionic Framework for building hybrid mobile
+                                applications that can run on multiple platforms. </p>
+                            <p>
+                                I also learned how to use SCSS for writing maintainable and modular styles that
+                                follow the best practices of CSS architecture.
+                                Moreover, I improved my code quality and readability by using TypeScript, a superset
+                                of JavaScript that adds static typing and catches errors at compile time.
+                            </p>
+                            <p>
+                                Furthermore, I used Angular, a popular framework for building complex web
+                                applications with a component-based architecture and data binding. Finally, I worked
+                                with
+                                Node Express, a fast and minimalist web framework for Node.js, and SQLite, a
+                                lightweight and embedded SQL database engine that can handle large datasets
+                                efficiently
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--geo cad-->
+            <div class="work">
+                <div class="work-header-small">
+                    <div class="work-header-wrapper">
+                        <h5>GEOCAD IT SOLUTIONS SRL</h5>
+                        <button data-target="#collapse3" class="collapse-btn">
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div id="collapse3" class="work-show-small collapse">
+                        <div class="work-wrapper">
+                            <div class="work-employer">
+                                <p>
+                                    Junior developer
+                                </p>
+                                <p>
+                                    August 2021 - Iunie 2022
+                                </p>
+                            </div>
+                            <div class="work-description">
+                                <p>
+                                    As a web developer, I have experience in designing and implementing HTML templates
+                                    for various projects.
+                                    I have also used JavaScript to create and manipulate DOM elements dynamically and
+                                    interactively.
+                                </p>
+                                <p>
+                                    To ensure the quality and functionality of my code,
+                                    I have performed testing with Cypress, a reliable and user-friendly tool for
+                                    end-to-end testing
+                                    Moreover, I have leveraged the power of Scss and Bootstrap to enhance the design and
+                                    responsiveness of my web pages,
+                                    making them more attractive and user-friendly.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-header-big">
+                    <div class="work-wrapper">
+                        <div class="work-employer">
+                            <h5>GEOCAD IT SOLUTIONS SRL</h5>
+                            <p>
+                                Junior developer
+                            </p>
+                            <p>
+                                August 2021 - Iunie 2022
+                            </p>
+                        </div>
+                        <div class="work-description">
+                            <p>
+                                I was responsible for a variety of web
+                                development tasks, including:
+                            </p>
+                            <p>
+                                HTML Template Implementation: Created and integrated HTML templates to ensure a
+                                consistent and user-friendly interface.
+                            </p>
+
+                            <p>
+                                CSS Preprocessor: Utilized SCSS for efficient and organized styling. CSS Frameworks:
+                                Implemented Bootstrap to streamline the development of responsive and
+                                modern designs.
+                            </p>
+                            <p>
+                                JavaScript: Developed and modified DOM elements, and handled AJAX requests for dynamic
+                                content updates.
+                            </p>
+                            <p>
+                                Testing: Conducted testing using Cypress to ensure the reliability and performance of
+                                web applications.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--internship-->
+            <div class="work">
+                <div class="work-header-small">
+                    <div class="work-header-wrapper">
+                        <h5>Internship</h5>
+                        <button data-target="#collapse4" class="collapse-btn">
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div id="collapse4" class="work-show-small collapse">
+                        <div class="work-wrapper">
+                            <div class="work-employer">
+                                <p>
+                                    Junior developer
+                                </p>
+                                <p>
+                                    Aug 2020 - Sep 2021
+                                </p>
+                            </div>
+                            <div class="work-description">
+                                <p>
+                                    I participated in a training program at an NGO that developed a website for victims
+                                    of the communist regime after the Second World War.
+                                    <br>During this time, I attended
+                                    meetings and learned the basics of HTML, CSS, and JavaScript. Additionally, I
+                                    contributed to the Next.js version of the project, which was initially built using
+                                    only HTML, CSS, and vanilla JavaScript.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-header-big">
+
+                    <div class="work-wrapper">
+                        <div class="work-employer">
+                            <p>
+                                Junior developer
+                            </p>
+                            <p>
+                                Aug 2020 - Sep 2021
+                            </p>
+                        </div>
+                        <div class="work-description">
+                            <p>
+                                I participated in a training program at an NGO that developed a website for victims
+                                of the communist regime after the Second World War.
+                                <br>During this time, I attended
+                                meetings and learned the basics of HTML, CSS, and JavaScript. Additionally, I
+                                contributed to the Next.js version of the project, which was initially built using
+                                only HTML, CSS, and vanilla JavaScript.
+
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
 
 
         </section>
-
-        <!--            timeline-->
-        <div class="title">
-            <p style="padding: 1rem 0">Learning path</p>
-        </div>
-        <div class="timeline">
-            <div class="container left">
-                <div class="date">03.2020</div>
-                <div class="content">
-                    <h2>Udemy courses</h2>
-                    <!--                    <p>Udemy courses</p>-->
-                    <ul>
-                        <li>
-                            <a href="https://www.udemy.com/share/1013eA3@gUdWp9H_AwOIuZh0jybizrqex7J4hSKAI9uDlCdNM5pDmQTFWxjs3OBSLoD0sFV2/"
-                               target="_blank">Html
-                                css - <span>Brad Traversy</span></a>
-                        </li>
-                        <li>
-                            <a href="https://www.udemy.com/share/1013hy3@G8rn75UN5MR8QipxBCOwK7tY7z4JBhktj3Q3Jtnt6sMVTk8nNzD98VdyMxcR3Fi6/"
-                               target="_blank">
-                                Css - <span> Max Schwarzmüller </span></a>
-                        </li>
-                        <li>
-                            <a href="https://www.udemy.com/share/101Xd83@4uNkIJCfAX5-dR9JEtQN-KqUX5gS8GicR3t9R4JMEo8xK1E7MBHjAJ0jI6yhEue8/"
-                               target="_blank">Bootstrap
-                                4 - <span>Brad Traversy</span></a>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-            <div class="container right">
-                <div class="date">07.2020</div>
-                <!--                <i class="icon fa fa-gift"></i>-->
-                <div class="content">
-                    <h2>Udemy courses</h2>
-                    <!--                    <p>Learning Javascript Es6</p>-->
-                    <ul>
-                        <li>
-                            <a href="https://www.udemy.com/share/101Wqk3@oie8UyBeqkK_fYVe2bVBP7jfdYcLr9oE-3JMyprquABIFnZH3qeQAGpdLgu5oF48/"
-                               target="_blank">Modern
-                                Javascript - <span>Brad Traversy</span></a>
-                        </li>
-                        <li>
-                            <a href="https://www.udemy.com/share/1029Rk3@NwQA6EedZhvy5WdzaFSgvpNGLEbdnP-SEwIFff3zx9Ls2sifIualq87E-UQwrT2N/"
-                               target="_blank">Javascript
-                                - <span>Max Schwarzmüller</span></a>
-                        </li>
-                        <li>
-                            <a href="https://www.udemy.com/share/101XTS3@xJEEUk149JeJ7D1wiDir7z-CARQ6ylyZTspJbGhjnBNF_axS8nYkZESyNyTZdly_/"
-                               target="_blank">Modern
-                                Javascript - <span>Shaun Pelling</span></a>
-                        </li>
-                        <li>
-                            <a href="https://www.udemy.com/share/101xFE3@BtZz8x8XzUQCUONBDK7Dj10eMALU8Makk17IgfG796U-iW55tPCgHSTTQphieD6g/"
-                               target="_blank">
-                                Javascript - <span>John Smilga</span></a>
-                        </li>
-
-                        <li>
-                            <a href="https://www.udemy.com/share/101XjU3@WuPKrfpPhWwjINsTwVTJWvIY7dRbQ_NoHfGJN6JaSaWpS86P82aNmLDbJfxWrU-O/"
-                               target="_blank">Weird
-                                parts of Js -
-                                <span>Anthony Alicea</span></a>
-                        </li>
-
-
-                    </ul>
-                </div>
-            </div>
-            <div class="container left">
-                <div class="date">10.2020</div>
-                <!--                <i class="icon fa fa-user"></i>-->
-                <div class="content">
-                    <h2>Udemy courses</h2>
-                    <ul>
-                        <li>
-                            <a href="https://www.udemy.com/share/101WzM3@qudHs_TNfkAtS48hIKE9FU4rctZ5rn6JlpgoTT7NX19uh9XhSdD9BsqpQZQNfide/"
-                               target="_blank">
-                                Vue js - <span>Max Schwarzmüller</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.udemy.com/share/101Wby3@Ui5aRYqPutnjk0RkZy1APJVtGIBS-3lKjGYX9y5UPtXwzDhfBMMjFlGJJaRD69-H/"
-                               target="_blank">
-                                React js -
-                                <span>Max Schwarzmüller</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.udemy.com/share/101ros3@H_K_QyvlM86J6y2mNLJMnJnujPH1JxWuRYkTqabbB6KbpeKvOhIw_b0lAfyI2_8c/"
-                               target="_blank">
-                                React - by <span>John Smilga</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="https://www.udemy.com/share/101X8W3@I-bOZQZaQrCDaxF6d-9CXly1L6RzP9vCo8xwVCxDB4lwwijQ7-Ood9WgL7UyfafV/"
-                               target="_blank">
-                                OOP - <span>Mosh Hamedani</span>
-                            </a>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-            <div class="container right">
-                <div class="date">04.2021</div>
-                <!--                <i class="icon fa fa-running"></i>-->
-                <div class="content">
-                    <h2>Udemy courses</h2>
-                    <ul>
-                        <li>
-                            <a href="https://codewithmosh.com/p/ultimate-redux" target="_blank">
-                                Redux - <span>Mosh Hamedani</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="https://www.udemy.com/share/104coM3@o3z7FHRiOuJt_HOAuMf1Wyq2RX8Z0ifp6dx5pv0z3WnV_gkFKyMC514fzsFwkq3v/"
-                               target="_blank">
-                                Next js - <span>Max Schwarzmüller</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="https://www.udemy.com/share/102fVS3@PfK7qZJIX3MSmrrcxEWqijZu81vPdz5c_ALQH8JAGkh3ZWQ2RTXt10D-vfFotK7G/"
-                               target="_blank">
-                                Mern - <span>Max Schwarzmüller</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="https://www.udemy.com/share/101xxa3@zFpxTkCrg2QmdJY08_ux6-z5sJuf1-aKxDpnI11VmvyFofQlvodebUsVLAd0Ik0o/"
-                               target="_blank">
-                                React Styled Components - <span>John Smilga</span>
-                            </a>
-                        </li>
-
-
-                    </ul>
-                </div>
-            </div>
-            <div class="container left">
-                <div class="date">06.2021</div>
-                <!--                <i class="icon fa fa-cog"></i>-->
-                <div class="content">
-                    <h2>Working on it !</h2>
-                    <ul>
-                        <li>
-                            <a href="javascript:">Git - <span>Max Schwarzmüller</span></a>
-                        </li>
-                        <li>
-                            <a href="https://www.udemy.com/share/104JOe3@OSi4OC9HJ9UeUYVTQEo2lAPLBanEZpmhiITE6X5OBLjTPbsXeCFcov9-oKWH0GrD/"
-                               target="_blank">Node js - <span>John Smilga</span></a>
-                        </li>
-                        <li>
-                            <a href="javascript:">Node js - <span>Max Schwarzmüller</span></a>
-                        </li>
-                        <li>
-                            <a href="https://www.udemy.com/share/1040ZS3@SPN9APnlhbho1LSwEhUgItmfJDnEQox2hTiOeYMhd1dvL819pSOgI2VTvFwz9010/"
-                               target="_blank">Jest Testing React- <span>Bonnie Schulkin</span></a>
-                        </li>
-
-                        <li>
-                            <a href="https://www.udemy.com/share/103quk3@bRnP32s_OhK2Pax2fQef8QsEZedyLXPw1TOppE3sKRIy0wjl7dMNa3tj0PQAlLbm/"
-                               target="_blank">Cypress UI Automation Testing - <span>Gainni Bruno</span> </a>
-                        </li>
-                        <li>
-                            <a href="https://www.udemy.com/share/1013yQ3@M5xgVLDix9ziq-O8As5o0QD4glboFuDzNEChCAADiP51Ioyk8YEzaH9SSMRJnwNR/"
-                               target="_blank">Typescript - <span>Max Schwarzmüller</span></a>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!--    -->
 
 
         <!--        future-->
@@ -380,34 +509,19 @@
             <div class="row-flex" id="future-start">
             </div>
 
-
         </section>
 
-        <section id="qa">
-            <h4>Q&A</h4>
-            <div class="extra">
-                <p class="question">Why did I start programming at the age of 39?</p>
-                <p class="answer">
-                    The global pandemic, stuck in the house so I had to be productive. Being attracted to computers and
-                    a Linux fan I decided to start learning new things. So I focused all my energy on front-end
-                    development. I already had some experience with html and css.
-                </p>
-                <p class="answer">And soon I realized the potential of Javascript.</p>
-            </div>
-            <div class="extra">
-                <p class="question">Why would you hire me?</p>
-                <p class="answer">Why not? Yes, I am older than the other candidates you've seen all day, but I have 20
-                    years life experience in the workforce, I am focused, determined, ready to learn new things and I've
-                    got bills to pay. </p>
-            </div>
-            <div class="extra">
-                <p class="question">Salary expectations?</p>
-                <p class="answer">At the moment, I am not focused too much on money, my goal is to learn new things.</p>
-            </div>
+        <section id="stats">
+<!--            Your stats :-->
+<!--            <p id="statistics"></p>-->
+<!--            <p id="clientIp"></p>-->
+           <h6 style="margin: 0 auto">Clients that visited my website had this os </h6>
 
-
+<!--            style="padding: 0 18rem; margin: 0 auto"-->
+            <div >
+                <canvas id="myChart"></canvas>
+            </div>
         </section>
-
     </div>
 
     <div class="cookie-container">
@@ -428,8 +542,57 @@
 
     <p class="footer" id="footer"></p>
 
+    <button id="scrollToTopButton" class="scrollToTopButton">
+        <i class="fa fa-chevron-up"></i>
+    </button>
 
 </main>
+<script>
+
+
+    // Get browser information
+    const browserInfo = {
+        appName: navigator.appName,
+        appCodeName: navigator.appCodeName,
+        appVersion: navigator.appVersion,
+        userAgent: navigator.userAgent,
+        platform: navigator.platform,
+    }
+
+    // console.log(browserInfo);
+    const stats = document.getElementById('statistics')
+    let text = '';
+    Object.entries(browserInfo).forEach(([key, value]) => {
+        // console.log(`${key}: ${value}`);
+        text += `${key}: ${value}\n`;
+    });
+    // stats.innerText = text;
+
+
+    // const client = document.getElementById('clientIp');
+
+    // fetch('https://api.ipify.org?format=json')
+    //     .then(response => {
+    //         if (!response.ok) {
+    //             throw new Error(`HTTP error! status: ${response.status}`);
+    //         }
+    //         return response.json();
+    //     })
+    //     .then(data => {
+    //         console.log(data);
+    //         // client.innerText = data?.ip;
+    //     })
+    //     .catch(error => {
+    //         console.log('There was a problem with the fetch operation: ' + error.message);
+    //     });
+
+
+
+    // get all cookies
+
+
+
+</script>
 
 </body>
 </html>

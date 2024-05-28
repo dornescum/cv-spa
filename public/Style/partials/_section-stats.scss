@@ -6,6 +6,16 @@
   margin: 0 auto;
   padding:1rem 0 0 0 ;
   width: $desktop;
+  @media (max-width: $tablet-bg) {
+    width: 100%;
+    padding: 10rem 2rem;
+  }
+
+  @media (max-width: $tablet) {
+    width: 100%;
+    padding: 6rem 2rem;
+  }
+
   @media (max-width: $sm) {
     width: 100%;
     padding: 2rem 1rem;

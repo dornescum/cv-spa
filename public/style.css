@@ -517,6 +517,18 @@
   padding: 1rem 0 0 0;
   width: 1366px;
 }
+@media (max-width: 1024px) {
+  #stats {
+    width: 100%;
+    padding: 10rem 2rem;
+  }
+}
+@media (max-width: 768px) {
+  #stats {
+    width: 100%;
+    padding: 6rem 2rem;
+  }
+}
 @media (max-width: 600px) {
   #stats {
     width: 100%;

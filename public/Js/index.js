@@ -305,6 +305,7 @@ window.onload = function () {
 
         setCookie('consent', true, 1);
         localStorage.setItem('cookieBannerDisplayed', 'true');
+        console.log('visit data ', visitData)
 
         // Call the postData and fetchDataAndDisplayChart functions after consent
         getOS();
@@ -358,6 +359,7 @@ function postData(url, data) {
             return response.json();
         })
         .then(data => {
+            console.log('data from post client ', data)
             return data;
         })
         .catch(error => console.error('There was a problem with the fetch operation: ', error));
@@ -377,7 +379,7 @@ function fetchDataAndDisplayChart() {
             return response.json();
         })
         .then((response) => {
-
+            console.log('response from get stats ', response)
             const labels = response.data.map(item => item.device_os);
             const data = response.data.map(item => item.count);
 

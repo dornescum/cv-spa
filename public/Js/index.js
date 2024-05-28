@@ -1,6 +1,8 @@
 console.time("timer");
 import {projects} from "./modules/Projects.js";
-// import {getOS} from "./serverConnection";
+// const url = 'http://localhost:3002/api/v1/agency/resume-stats';
+const url = 'https://api.mp.dornescu.ro/api/v1/agency/resume-stats';
+
 
 const getElement = (selection) => {
     const element = document.querySelector(selection);
@@ -51,17 +53,7 @@ window.addEventListener("DOMContentLoaded", function () {
     setTimeout(hideLoading, 1500);
 });
 // past
-const pastLeftBtn = document.getElementById('pastLeftBtn');
-const pastRightBtn = document.getElementById('pastRightBtn');
-// const pastLeftCard = document.getElementById('past-left');
-// const pastRightCard = document.getElementById('past-right');
 
-// pastLeftBtn.addEventListener('click', () => {
-//     pastLeftCard.classList.add('hide-loading');
-// });
-// pastRightBtn.addEventListener('click', () => {
-//     pastRightCard.classList.add('hide-loading');
-// });
 
 //footer
 const footer = document.getElementById('footer');
@@ -250,7 +242,6 @@ const cookieButton = document.querySelector(".cookie-btn");
 
 
 function setCookie(name, value, days) {
-    console.log('setting cookie ')
     const date = new Date();
     date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
     const expires = "expires=" + date.toUTCString();
@@ -259,7 +250,6 @@ function setCookie(name, value, days) {
 
 // Function to read a cookie
 function getCookie(name) {
-    console.log('getting cookie ')
     let nameEQ = name + "=";
     let ca = document.cookie.split(';');
     for (let i = 0; i < ca.length; i++) {
@@ -271,49 +261,68 @@ function getCookie(name) {
 }
 
 
+// getOs information is mobile, browser etc
+const isMobile = /Mobi/i.test(window.navigator.userAgent);
+const browser = window.navigator.userAgent;
+const screenWidth = window.screen.width;
+const screenHeight = window.screen.height;
+const os = getOS();
+const visitTime = new Date().toISOString();
+
+
+const clientCookies = document.cookie;
+
+const visitData = {
+    browser, os, visitTime, isMobile, screenWidth, screenHeight, clientCookies
+};
+
 //todo check if cookie accepted
 
 window.onload = function () {
-    // Check if consent has been given in the past
     const consent = getCookie('consent');
+    const cookieButton = document.querySelector('.cookie-btn');
+    const cookieContainer = document.querySelector('.cookie-container');
+    const statsElement = document.getElementById('stats');
 
-    if (consent) {
+
+    if (!consent) {
+        cookieContainer.classList.remove('hide-loading');
+        cookieContainer.classList.add('active');
+        statsElement.classList.add('hide');
+    } else {
+        cookieContainer.classList.add('hide-loading');
+        cookieContainer.classList.remove('active');
+        statsElement.classList.remove('hide');
+
         console.log('consent given');
-        setCookie('consent', true, 1); // this will expire in 1 day
-        getOS();
+        fetchDataAndDisplayChart();
     }
+
+    cookieButton.addEventListener("click", () => {
+        cookieContainer.classList.add('hide-loading');
+        cookieContainer.classList.remove('active');
+        statsElement.classList.remove('hide');
+
+        setCookie('consent', true, 1);
+        localStorage.setItem('cookieBannerDisplayed', 'true');
+
+        // Call the postData and fetchDataAndDisplayChart functions after consent
+        getOS();
+        postData(url, visitData);
+        fetchDataAndDisplayChart();
+    });
+
+    setTimeout(() => {
+        if (!localStorage.getItem('cookieBannerDisplayed')) {
+            cookieContainer.classList.remove('hide-loading');
+            cookieContainer.classList.add('active');
+        }
+    }, 1000);
 }
 
 
-setTimeout(() => {
-    const consent = getCookie('consent');
-    if (consent) {
-        console.log('consent given');
-        cookieContainer.classList.remove("active");
-        cookieContainer.classList.add("hide-loading");
-    } else {
-        cookieContainer.classList.add('active');
-    }
-
-}, 100);
-
-cookieButton.addEventListener("click", () => {
-
-    cookieContainer.classList.add("hide-loading");
-    cookieContainer.classList.remove("active");
-    localStorage.setItem("cookieBannerDisplayed", "true");
-
-    setCookie('consent', true, 1);
-});
-
-setTimeout(() => {
-    if (!localStorage.getItem("cookieBannerDisplayed")) {
-        cookieContainer.classList.remove("hide-loading");
-    }
-}, 1000);
-
 // == get os error
-export function getOS() {
+function getOS() {
     const userAgent = window.navigator.userAgent;
     const platform = window.navigator.platform;
     const macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'];
@@ -334,88 +343,68 @@ export function getOS() {
     return 'Unknown OS';
 }
 
-const isMobile = /Mobi/i.test(window.navigator.userAgent);
-const browser = window.navigator.userAgent;
-const screenWidth = window.screen.width;
-const screenHeight = window.screen.height;
-const os = getOS();
-const visitTime = new Date().toISOString();
-
-console.log('client cookies ',document.cookie);
-
-const clientCookies = document.cookie;
-
-const visitData = {
-    browser,
-    os,
-    visitTime,
-    isMobile,
-    screenWidth,
-    screenHeight,
-    clientCookies
-};
-
-console.log('visited data ', visitData)
-const url = 'http://localhost:3002/api/v1/agency/resume-stats';
-fetch(url, {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(visitData)
-})
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
+function postData(url, data) {
+    return fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
     })
-    .then(data => console.log('data from fetch ', data))
-    .catch(error => console.error('There was a problem with the fetch operation: ', error));
-
-// get data after cookie consent
-// const url = 'http://localhost:3002/api/v1/agency/resume-stats';
-
-let clientsOs;
-fetch(url, {
-    method: 'GET',
-    headers: {
-        'Content-Type': 'application/json',
-    },
-})
-    .then((response) => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-    })
-    .then((response) => {
-        console.log('data from fetch GET : ', response.data);
-
-        const labels = response.data.map(item => item.device_os);
-        const data = response.data.map(item => item.count);
-
-        const ctx = document.getElementById('myChart');
-        new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: labels,
-                datasets: [{
-                    label: '# of OSs',
-                    data: data,
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
             }
-        });
+            return response.json();
+        })
+        .then(data => {
+            return data;
+        })
+        .catch(error => console.error('There was a problem with the fetch operation: ', error));
+}
+
+function fetchDataAndDisplayChart() {
+    fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        },
     })
-    .catch((error) => console.error('There was a problem with the fetch operation: ', error));
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then((response) => {
+
+            const labels = response.data.map(item => item.device_os);
+            const data = response.data.map(item => item.count);
+
+            const ctx = document.getElementById('myChart');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: '# Clients OSs',
+                        data: data,
+                        borderWidth: 1,
+                        backgroundColor: 'gray',
+                    }],
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    },
+                    color: '#5e5e5e',
+                }
+            });
+        })
+        .catch((error) => console.error('There was a problem with the fetch operation: ', error));
+}
 
 
 // chart js

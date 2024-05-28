@@ -512,6 +512,18 @@
   display: block;
 }
 
+#stats {
+  margin: 0 auto;
+  padding: 1rem 0 0 0;
+  width: 1366px;
+}
+@media (max-width: 600px) {
+  #stats {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+}
+
 .footer {
   bottom: 0;
   left: 0;

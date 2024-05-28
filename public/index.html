@@ -17,7 +17,7 @@
     </script>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
-    <meta content="Junior Front end developer, Javascript, Html5, Css3, Sccs, React js,Next js, Vue js"
+    <meta content="Junior Front end developer, Javascript, Html5, Css3, Sccs, React js,Next js,Angular, Express, Mysql, Sqlite, Ionic"
           name="description"/>
     <meta content="Vanilla Javascript " name="keywords"/>
     <meta content="Mihai Dornescu" name="author"/>
@@ -33,9 +33,9 @@
     <script defer src="Js/index.js" type="module"></script>
     <script defer src="Js/modules/upBtn.js" type="module"></script>
     <script defer src="Js/modules/mobileExperience.js" type="module"></script>
-<!--    <script defer src="Js/serverConnection.js" type="module"></script>-->
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
 
     <title>Cv Mihai Dornescu</title>
@@ -52,6 +52,9 @@
         .show {
             display: block !important;
             height: auto;
+        }
+        .hide {
+            display: none;
         }
 
     </style>
@@ -115,21 +118,6 @@
                 </li>
 
             </ul>
-
-            <!--                        <ul class="bottom-sidebar">-->
-            <!--                            <li class="bottom-link">-->
-            <!--                                <a  href="tel:0762369717">-->
-            <!--                                    <i class="fas fa-phone"></i>Call Me </a>-->
-            <!--                            </li>-->
-            <!--                            <li class="bottom-link">-->
-            <!--                                <a  href="mailto:dornescu@gmail.com"><i class="fas fa-envelope">-->
-            <!--                                  </i>-->
-            <!--                                    Email-->
-            <!--                                    Me-->
-            <!--                                </a>-->
-            <!--                            </li>-->
-            <!--                        </ul>-->
-
         </aside>
     </div>
     <!--loading-->
@@ -512,16 +500,15 @@
         </section>
 
         <section id="stats">
-<!--            Your stats :-->
-<!--            <p id="statistics"></p>-->
-<!--            <p id="clientIp"></p>-->
-           <h6 style="margin: 0 auto">Clients that visited my website had this os </h6>
-
-<!--            style="padding: 0 18rem; margin: 0 auto"-->
+           <h6>Clients that visited my website had this os </h6>
             <div >
                 <canvas id="myChart"></canvas>
             </div>
+            <p>
+                All data is used for analytics
+            </p>
         </section>
+
     </div>
 
     <div class="cookie-container">
@@ -547,52 +534,7 @@
     </button>
 
 </main>
-<script>
 
-
-    // Get browser information
-    const browserInfo = {
-        appName: navigator.appName,
-        appCodeName: navigator.appCodeName,
-        appVersion: navigator.appVersion,
-        userAgent: navigator.userAgent,
-        platform: navigator.platform,
-    }
-
-    // console.log(browserInfo);
-    const stats = document.getElementById('statistics')
-    let text = '';
-    Object.entries(browserInfo).forEach(([key, value]) => {
-        // console.log(`${key}: ${value}`);
-        text += `${key}: ${value}\n`;
-    });
-    // stats.innerText = text;
-
-
-    // const client = document.getElementById('clientIp');
-
-    // fetch('https://api.ipify.org?format=json')
-    //     .then(response => {
-    //         if (!response.ok) {
-    //             throw new Error(`HTTP error! status: ${response.status}`);
-    //         }
-    //         return response.json();
-    //     })
-    //     .then(data => {
-    //         console.log(data);
-    //         // client.innerText = data?.ip;
-    //     })
-    //     .catch(error => {
-    //         console.log('There was a problem with the fetch operation: ' + error.message);
-    //     });
-
-
-
-    // get all cookies
-
-
-
-</script>
 
 </body>
 </html>

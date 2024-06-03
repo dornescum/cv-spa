@@ -113,7 +113,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     btn1.addEventListener('click', () => {
         modal.classList.add('show-modal');
-        // messageModal.innerHTML = 'This website was built with classic HTML,Bootstrap, SCCS, and Javascript.'
         const mess = new Message('This web site is build with  jQuery for dynamic content manipulation and interactive features. Implemented Bootstrap to create a responsive, user-friendly interface, Used Cypress to perform end-to-end testing, ensuring the functionality and reliability of the web application.');
         messageModal.innerHTML = mess.info;
     });

@@ -30,7 +30,7 @@ export const projects = [{
 	{
 		desc: 'Full stack admin panel ',
 		id: 'p-4',
-		link: "http://pi-frontend.cpco.ro/index.html",
+		link: "http://62.171.167.229:4200/client/#/home",
 		title: ' warehouse simulation',
 		img: '@../../assets/img/admin.webp',
 		icon: 'fas fa-camera fa-lg',

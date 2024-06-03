@@ -93,7 +93,6 @@ window.addEventListener('DOMContentLoaded', () => {
                             <p class="card-desc" id=${id}>${desc}</p>
                            
                             <a href=${link} class="card-link" target="_blank">
-                           		
                                 <i class="fa fa-chevron-right" aria-hidden="true"></i>
                             </a>
                         </div>

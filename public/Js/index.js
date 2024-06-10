@@ -221,8 +221,6 @@ Additionally, MySQL is seamlessly integrated, offering robust data management an
         const mess = new Message(description);
         messageModal.innerHTML = mess.info;
     });
-
-
     btnModal.addEventListener('click', () => {
         if (btnModal.classList.contains('show-modal')) {
             modal.classList.remove('show-modal');
@@ -281,7 +279,7 @@ window.onload = function () {
     const cookieButton = document.querySelector('.cookie-btn');
     const cookieContainer = document.querySelector('.cookie-container');
     const statsElement = document.getElementById('stats');
-
+    fetchSearch();
 
     if (!consent) {
         cookieContainer.classList.remove('hide-loading');
@@ -302,13 +300,13 @@ window.onload = function () {
         statsElement.classList.remove('hide');
 
         setCookie('consent', true, 1);
-        localStorage.setItem('cookieBannerDisplayed', 'true');
-        console.log('visit data ', visitData)
+        // localStorage.setItem('cookieBannerDisplayed', 'true');
+        // console.log('visit data ', visitData)
 
-        // Call the postData and fetchDataAndDisplayChart functions after consent
         getOS();
         postData(url, visitData);
         fetchDataAndDisplayChart();
+
     });
 
     setTimeout(() => {
@@ -377,7 +375,7 @@ function fetchDataAndDisplayChart() {
             return response.json();
         })
         .then((response) => {
-            console.log('response from get stats ', response)
+            // console.log('response from get stats ', response)
             const labels = response.data.map(item => item.device_os);
             const data = response.data.map(item => item.count);
 
@@ -406,6 +404,37 @@ function fetchDataAndDisplayChart() {
         .catch((error) => console.error('There was a problem with the fetch operation: ', error));
 }
 
+function fetchSearch() {
+    // console.log('1')
+    fetch('https://api.mp.dornescu.ro/api/v1/agency/statistics/search-values', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    })
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then((response) => {
+            let maxJob = '';
+            let maxCount = 0;
+
+            for (let i = 0; i < response.data.length; i++) {
+                if(response.data[i].occurrence_count > maxCount) {
+                    maxJob = response.data[i].jobs;
+                    maxCount = response.data[i].occurrence_count;
+                }
+            }
+
+            document.getElementById('workers-search').innerHTML = ` <span style="font-weight: 900">${maxJob.toUpperCase()}</span> was searched ${maxCount}`;
+
+
+        })
+        .catch((error) => console.error('There was a problem with the fetch operation: ', error));
+}
 
 // chart js
 console.timeEnd("timer");

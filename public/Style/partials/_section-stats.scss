@@ -4,8 +4,12 @@
 
 #stats {
   margin: 0 auto;
-  padding:1rem 0 0 0 ;
+  padding: 1rem 0 0 0;
   width: $desktop;
+  p {
+    padding: 1rem 0;
+    line-height: 1.9;
+  }
   @media (max-width: $tablet-bg) {
     width: 100%;
     padding: 10rem 2rem;
@@ -19,5 +23,19 @@
   @media (max-width: $sm) {
     width: 100%;
     padding: 2rem 1rem;
+  }
+
+
+}
+
+#workers {
+  padding: 1rem 2rem;
+  p {
+    padding: 1rem 0;
+  }
+  a {
+    font-weight: bold;
+    color: $black;
+    text-decoration: none;
   }
 }

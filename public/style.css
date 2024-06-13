@@ -541,12 +541,24 @@
 }
 
 #workers {
-  padding: 1rem 2rem;
+  padding: 2rem 2rem 0 2rem;
 }
 #workers p {
   padding: 1rem 0;
 }
 #workers a {
+  font-weight: bold;
+  color: #222;
+  text-decoration: none;
+}
+
+#image-stats {
+  padding: 0 2rem 0 2rem;
+}
+#image-stats p {
+  padding: 1rem 0;
+}
+#image-stats a {
   font-weight: bold;
   color: #222;
   text-decoration: none;

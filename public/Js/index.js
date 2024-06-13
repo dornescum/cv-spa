@@ -1,4 +1,4 @@
-console.time("timer");
+console.time("start timer");
 import {projects} from "./modules/Projects.js";
 // const url = 'http://localhost:3002/api/v1/agency/resume-stats';
 const url = 'https://api.mp.dornescu.ro/api/v1/agency/resume-stats';
@@ -280,6 +280,7 @@ window.onload = function () {
     const cookieContainer = document.querySelector('.cookie-container');
     const statsElement = document.getElementById('stats');
     fetchSearch();
+    fetchPythonImagesUniqueUsers();
 
     if (!consent) {
         cookieContainer.classList.remove('hide-loading');
@@ -306,7 +307,6 @@ window.onload = function () {
         getOS();
         postData(url, visitData);
         fetchDataAndDisplayChart();
-
     });
 
     setTimeout(() => {
@@ -436,6 +436,30 @@ function fetchSearch() {
         .catch((error) => console.error('There was a problem with the fetch operation: ', error));
 }
 
+function fetchPythonImagesUniqueUsers() {
+    // console.log('1')
+    fetch('https://api.mp.dornescu.ro/api/v1/agency/python-users-count', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    })
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then((response) => {
+            console.log('response', response)
+            let uniqueUsers = response.data[0].count;
+            document.getElementById('python-stats').innerHTML = `${uniqueUsers}`;
+
+
+        })
+        .catch((error) => console.error('There was a problem with the fetch operation: ', error));
+}
+
 // chart js
-console.timeEnd("timer");
+console.timeEnd("end timer");
 

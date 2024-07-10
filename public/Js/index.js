@@ -72,7 +72,6 @@ footer.append(contact);
 // future
 const future = document.getElementById('future-start');
 
-
 class Message {
     constructor(info) {
         this.info = info;
@@ -106,6 +105,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const btn3 = document.getElementById('btn-3');
     const btn4 = document.getElementById('btn-4');
     const btn5 = document.getElementById('btn-5');
+    const btn6 = document.getElementById('btn-6');
 
     let messageModal = document.getElementById('message-modal');
 
@@ -218,6 +218,29 @@ Additionally, MySQL is seamlessly integrated, offering robust data management an
              This project stands out as a state-of-the-art e-commerce solution, with its focus on interactivity, mobile-first user engagement, 
              and compelling aesthetic appeal.
         `
+        const mess = new Message(description);
+        messageModal.innerHTML = mess.info;
+    });
+    btn6.addEventListener('click', () => {
+        modal.classList.add('show-modal');
+        const description = `
+This website is built with <span style='color: #000000; font-weight: bold'>Express</span>, <span style='color: #000000; font-weight: bold'>Ejs</span>,
+and utilizes <span style='color: #000000; font-weight: bold'>MySQL</span> for data management.
+<br>
+<br>
+Emphasizing on a responsive, mobile-first design, the platform ensures optimal usability and aesthetically pleasing interfaces on smaller screens,
+progressively enhancing the user experience for larger devices. In today's mobile-centric environment, such an approach guarantees broad reach and user satisfaction.
+<br>
+<br>
+This project leverages the strengths of Express.js, with efficient page routing, contributing to an exceptionally performant user experience. 
+The incorporation of popular frontend libraries like <span style='color: #000000; font-weight: bold'>Bootstrap</span> guarantees a modern, responsive design that elegantly adapts across various devices.
+<br>
+<br>
+Alongside, with the integration of security libraries; <span style='color: #000000; font-weight: bold'>Express-Validator</span> for data validation and sanitization, and <span style='color: #000000; font-weight: bold'>Helmet</span> for securing Express apps by setting various HTTP headers, this website stands as a safe and secure solution for small-to-medium companies operating in the Software as a Service (SaaS) domain.
+<br>
+<br>
+In essence, the project embodies best practices of configuration and development, offering a state-of-the-art solution with a focus on interactivity, responsive design, and application security.
+`;
         const mess = new Message(description);
         messageModal.innerHTML = mess.info;
     });
@@ -342,11 +365,9 @@ function getOS() {
 
 function postData(url, data) {
     return fetch(url, {
-        method: 'POST',
-        headers: {
+        method: 'POST', headers: {
             'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
+        }, body: JSON.stringify(data)
     })
         .then(response => {
             if (!response.ok) {
@@ -363,8 +384,7 @@ function postData(url, data) {
 
 function fetchDataAndDisplayChart() {
     fetch(url, {
-        method: 'GET',
-        headers: {
+        method: 'GET', headers: {
             'Content-Type': 'application/json',
         },
     })
@@ -381,23 +401,16 @@ function fetchDataAndDisplayChart() {
 
             const ctx = document.getElementById('myChart');
             new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: labels,
-                    datasets: [{
-                        label: '# Clients OSs',
-                        data: data,
-                        borderWidth: 1,
-                        backgroundColor: 'gray',
+                type: 'bar', data: {
+                    labels: labels, datasets: [{
+                        label: '# Clients OSs', data: data, borderWidth: 1, backgroundColor: 'gray',
                     }],
-                },
-                options: {
+                }, options: {
                     scales: {
                         y: {
                             beginAtZero: true
                         }
-                    },
-                    color: '#5e5e5e',
+                    }, color: '#5e5e5e',
                 }
             });
         })
@@ -407,8 +420,7 @@ function fetchDataAndDisplayChart() {
 function fetchSearch() {
     // console.log('1')
     fetch('https://api.mp.dornescu.ro/api/v1/agency/statistics/search-values', {
-        method: 'GET',
-        headers: {
+        method: 'GET', headers: {
             'Content-Type': 'application/json',
         },
     })
@@ -423,7 +435,7 @@ function fetchSearch() {
             let maxCount = 0;
 
             for (let i = 0; i < response.data.length; i++) {
-                if(response.data[i].occurrence_count > maxCount) {
+                if (response.data[i].occurrence_count > maxCount) {
                     maxJob = response.data[i].jobs;
                     maxCount = response.data[i].occurrence_count;
                 }
@@ -439,8 +451,7 @@ function fetchSearch() {
 function fetchPythonImagesUniqueUsers() {
     // console.log('1')
     fetch('https://api.mp.dornescu.ro/api/v1/agency/python-users-count', {
-        method: 'GET',
-        headers: {
+        method: 'GET', headers: {
             'Content-Type': 'application/json',
         },
     })

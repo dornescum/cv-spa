@@ -46,4 +46,15 @@ export const projects = [{
 	btnId: 'btn-5'
 },
 
+	{
+	desc: 'Express & ejs & mysql',
+	id: 'p-6',
+	link: "https://mirave.ro",
+	title: 'Mirave.ro',
+	img: '@../../assets/img/mirave_prices.webp',
+	icon: 'fas fa-camera fa-lg',
+	btnId: 'btn-6'
+},
+
+
 ];

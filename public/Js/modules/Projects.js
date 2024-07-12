@@ -7,6 +7,16 @@ export const projects = [{
 	icon: 'fas fa-camera fa-lg',
 	btnId: 'btn-1'
 },
+
+	{
+		desc: 'Express & ejs & mysql',
+		id: 'p-6',
+		link: "https://mirave.ro",
+		title: 'Mirave.ro',
+		img: '@../../assets/img/mirave_prices.webp',
+		icon: 'fas fa-camera fa-lg',
+		btnId: 'btn-6'
+	},
 	{
 		desc: 'Handymen POC',
 		id: 'p-2',
@@ -44,17 +54,7 @@ export const projects = [{
 	img: '@../../assets/img/ecommerce.webp',
 	icon: 'fas fa-camera fa-lg',
 	btnId: 'btn-5'
-},
-
-	{
-	desc: 'Express & ejs & mysql',
-	id: 'p-6',
-	link: "https://mirave.ro",
-	title: 'Mirave.ro',
-	img: '@../../assets/img/mirave_prices.webp',
-	icon: 'fas fa-camera fa-lg',
-	btnId: 'btn-6'
-},
+}
 
 
 ];
